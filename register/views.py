@@ -10,6 +10,18 @@ from django.contrib import messages
 from .models import Team
 from django.contrib.auth.decorators import login_required
 
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+scope =["https://spreadsheets.google.com/feeds",
+        'https://www.googleapis.com/auth/spreadsheets',
+        "https://www.googleapis.com/auth/drive.file",
+        "https://www.googleapis.com/auth/drive"]
+creds = ServiceAccountCredentials.from_json_keyfile_name("service_account.json", scope)
+client = gspread.authorize(creds)
+
+spreadsheet = client.open("List_of_teams")
+wks = spreadsheet.worksheet("demo")
 
 # Create your views here.
 def home(request):
@@ -29,6 +41,22 @@ class register(View):
                 Email = request.POST['email']
                 Password = request.POST['password']
                 tf.save()
+
+                idx = len(wks.get_all_values()) + 1
+                wks.update_cell(idx, 1, request.POST['team'])
+                wks.update_cell(idx, 2, request.POST['email'])
+                wks.update_cell(idx, 3, request.POST['password'])
+                wks.update_cell(idx, 4, request.POST['school'])
+                wks.update_cell(idx, 5, request.POST['member1'])
+                wks.update_cell(idx, 6, request.POST['cmnd1'])
+                wks.update_cell(idx, 7, request.POST['phone1'])
+                wks.update_cell(idx, 8, request.POST['member2'])
+                wks.update_cell(idx, 9, request.POST['cmnd2'])
+                wks.update_cell(idx, 10, request.POST['phone2'])
+                wks.update_cell(idx, 11, request.POST['member3'])
+                wks.update_cell(idx, 12, request.POST['cmnd3'])
+                wks.update_cell(idx, 13, request.POST['phone3'])
+
                 user = User.objects.create_user(Email, Email, Password)
                 Team = tf.cleaned_data.get('team')
                 messages.success(request, '✔️ Tài khoản '+Team+' đã đăng ký thành công!')
