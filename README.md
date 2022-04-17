@@ -28,10 +28,10 @@ python3 -m venv env
 source env/bin/activate
 
 # ⚙ Setup environment
-pip3 install -r .\requirements.txt
+pip3 install -r requirements.txt
 
 # 🏃‍♂️ Run server
-python3 .\manage.py runserver
+python3 manage.py runserver
 ```
 
 ### Testing
