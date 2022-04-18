@@ -10,6 +10,7 @@ from django.contrib import messages
 from .models import Team
 from django.contrib.auth.decorators import login_required
 
+import numpy as np
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -42,20 +43,21 @@ class register(View):
                 Password = request.POST['password']
                 tf.save()
 
-                idx = len(wks.get_all_values()) + 1
-                wks.update_cell(idx, 1, tf.cleaned_data.get('team'))
-                wks.update_cell(idx, 2, tf.cleaned_data.get('email'))
-                wks.update_cell(idx, 3, request.POST['password'])
-                wks.update_cell(idx, 4, str(tf.cleaned_data.get('school')))
-                wks.update_cell(idx, 5, tf.cleaned_data.get('member1'))
-                wks.update_cell(idx, 6, tf.cleaned_data.get('cmnd1'))
-                wks.update_cell(idx, 7, tf.cleaned_data.get('phone1'))
-                wks.update_cell(idx, 8, tf.cleaned_data.get('member2'))
-                wks.update_cell(idx, 9, tf.cleaned_data.get('cmnd2'))
-                wks.update_cell(idx, 10, tf.cleaned_data.get('phone2'))
-                wks.update_cell(idx, 11, tf.cleaned_data.get('member3'))
-                wks.update_cell(idx, 12, tf.cleaned_data.get('cmnd2'))
-                wks.update_cell(idx, 13, tf.cleaned_data.get('phone3'))
+                idx = f'A{str(len(wks.get_all_values()) + 1)}'
+                information = np.array([[tf.cleaned_data.get('team'),
+                                        tf.cleaned_data.get('email'),
+                                        request.POST['password'], 
+                                        str(tf.cleaned_data.get('school')),
+                                        tf.cleaned_data.get('member1'),
+                                        tf.cleaned_data.get('cmnd1'),
+                                        tf.cleaned_data.get('phone1'),
+                                        tf.cleaned_data.get('member2'),
+                                        tf.cleaned_data.get('cmnd2'),
+                                        tf.cleaned_data.get('phone2'),
+                                        tf.cleaned_data.get('member3'),
+                                        tf.cleaned_data.get('cmnd3'),
+                                        tf.cleaned_data.get('phone3')]])
+                wks.update(idx, information.tolist())
 
                 user = User.objects.create_user(Email, Email, Password)
                 Team = tf.cleaned_data.get('team')
