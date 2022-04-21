@@ -23,14 +23,18 @@ class teamForm(forms.ModelForm):
     email = forms.CharField(label= 'Email', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: abcd@efgh.com' }))
     class Meta:
         model = Team
-        fields = ['team', 'member1', 'cmnd1', 'phone1', 'member2', 'cmnd2', 'phone2', 'member3', 'cmnd3', 'phone3', 'email', 'school']
-        widgets = {"school":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' })}
+        fields = ['team', 'member1', 'cmnd1', 'phone1', 'school1', 'member2', 'cmnd2', 'phone2', 'school2', 'member3', 'cmnd3', 'phone3', 'school3', 'email']
+        widgets = { "school1":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' }),
+                    "school2":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' }),
+                    "school3":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' })}
     password = forms.CharField(max_length = 20, label = 'Mật khẩu', validators=[PasswordRegex], widget = forms.PasswordInput(attrs={'class': 'form-control', 'id': 'pos5'}))
 
     def __init__(self, *args, **kwargs):
         super(teamForm, self).__init__(*args, **kwargs)
 
-        self.fields['school'].label = "Trường"
+        self.fields['school1'].label = "Trường"
+        self.fields['school2'].label = "Trường"
+        self.fields['school3'].label = "Trường"
 
         # add custom error messages
         self.fields['team'].error_messages.update({
@@ -88,6 +92,8 @@ class editForm(forms.ModelForm):
     phone3 = forms.CharField(max_length=11, label = 'Phone', widget = forms.TextInput(attrs={'class': 'form-control', 'id': 'pos4', 'placeholder': 'example: 0912345678'}))
     class Meta:
         model = Team
-        fields = ['member1', 'cmnd1', 'phone1', 'member2',  'cmnd2', 'phone2', 'member3', 'cmnd3', 'phone3','school']
-        widgets = {"school":forms.Select(attrs={'class': 'form-control', 'id': 'pos5', 'placeholder': 'Enter your school\'s name' })}
+        fields = ['team', 'member1', 'cmnd1', 'phone1', 'school1', 'member2', 'cmnd2', 'phone2', 'school2', 'member3', 'cmnd3', 'phone3', 'school3', 'email']
+        widgets = { "school1":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' }),
+                    "school2":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' }),
+                    "school3":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' })}
     
