@@ -31,17 +31,17 @@ class Team(models.Model):
     member1 = models.CharField(max_length=30, null=False, blank=False, validators=[NameRegex])
     cmnd1 = models.CharField(max_length=12, unique=True, null=True, blank=False, validators=[CMNDandCCCD])
     phone1 = models.CharField(max_length=11, null=True, blank=False, validators=[NumberRegex])
-    school1 = models.ForeignKey(School, on_delete=models.CASCADE, related_name='school1')
+    school1 = models.ForeignKey(School, on_delete=models.CASCADE, related_name='school1', default='-----')
 
     member2 = models.CharField(max_length=30, null=False, blank=False, validators=[NameRegex])
     cmnd2 = models.CharField(max_length=12, unique=True, null=True, blank=False, validators=[CMNDandCCCD])
     phone2 = models.CharField(max_length=11, null=True, blank=False, validators=[NumberRegex])
-    school2 = models.ForeignKey(School, on_delete=models.CASCADE, related_name='school2')
+    school2 = models.ForeignKey(School, on_delete=models.CASCADE, related_name='school2', default='-----')
 
     member3 = models.CharField(max_length=30, null=False, blank=False, validators=[NameRegex])
     cmnd3 = models.CharField(max_length=12, unique=True, null=True, blank=False, validators=[CMNDandCCCD])
     phone3 = models.CharField(max_length=11, null=True, blank=False, validators=[NumberRegex])
-    school3 = models.ForeignKey(School, on_delete=models.CASCADE, related_name='school3')
+    school3 = models.ForeignKey(School, on_delete=models.CASCADE, related_name='school3', default='-----')
 
     email = models.EmailField(null=False, blank=False, unique=True)
     paid = models.BooleanField(default=False)
