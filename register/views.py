@@ -14,15 +14,15 @@ import numpy as np
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-scope =["https://spreadsheets.google.com/feeds",
-        'https://www.googleapis.com/auth/spreadsheets',
-        "https://www.googleapis.com/auth/drive.file",
-        "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("service_account.json", scope)
-client = gspread.authorize(creds)
+# scope =["https://spreadsheets.google.com/feeds",
+#         'https://www.googleapis.com/auth/spreadsheets',
+#         "https://www.googleapis.com/auth/drive.file",
+#         "https://www.googleapis.com/auth/drive"]
+# creds = ServiceAccountCredentials.from_json_keyfile_name("service_account.json", scope)
+# client = gspread.authorize(creds)
 
-spreadsheet = client.open("List_of_teams")
-wks = spreadsheet.worksheet("demo")
+# spreadsheet = client.open("List_of_teams")
+# wks = spreadsheet.worksheet("demo")
 
 # Create your views here.
 def home(request):
@@ -43,23 +43,23 @@ class register(View):
                 Password = request.POST['password']
                 tf.save()
 
-                idx = f'A{str(len(wks.get_all_values()) + 1)}'
-                information = np.array([[tf.cleaned_data.get('team'),
-                                        tf.cleaned_data.get('email'),
-                                        request.POST['password'], 
-                                        str(tf.cleaned_data.get('school1')),
-                                        str(tf.cleaned_data.get('school2')),
-                                        str(tf.cleaned_data.get('school3')),
-                                        tf.cleaned_data.get('member1'),
-                                        tf.cleaned_data.get('cmnd1'),
-                                        tf.cleaned_data.get('phone1'),
-                                        tf.cleaned_data.get('member2'),
-                                        tf.cleaned_data.get('cmnd2'),
-                                        tf.cleaned_data.get('phone2'),
-                                        tf.cleaned_data.get('member3'),
-                                        tf.cleaned_data.get('cmnd3'),
-                                        tf.cleaned_data.get('phone3')]])
-                wks.update(idx, information.tolist())
+                # idx = f'A{str(len(wks.get_all_values()) + 1)}'
+                # information = np.array([[tf.cleaned_data.get('team'),
+                #                         tf.cleaned_data.get('email'),
+                #                         request.POST['password'], 
+                #                         str(tf.cleaned_data.get('school1')),
+                #                         str(tf.cleaned_data.get('school2')),
+                #                         str(tf.cleaned_data.get('school3')),
+                #                         tf.cleaned_data.get('member1'),
+                #                         tf.cleaned_data.get('cmnd1'),
+                #                         tf.cleaned_data.get('phone1'),
+                #                         tf.cleaned_data.get('member2'),
+                #                         tf.cleaned_data.get('cmnd2'),
+                #                         tf.cleaned_data.get('phone2'),
+                #                         tf.cleaned_data.get('member3'),
+                #                         tf.cleaned_data.get('cmnd3'),
+                #                         tf.cleaned_data.get('phone3')]])
+                # wks.update(idx, information.tolist())
 
                 user = User.objects.create_user(Email, Email, Password)
                 Team = tf.cleaned_data.get('team')
