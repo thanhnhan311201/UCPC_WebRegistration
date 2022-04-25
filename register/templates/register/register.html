@@ -14,7 +14,7 @@
 
 <div class="form-group">
 	<div class="container">
-		<form action="{% url 'register:register' %}" method="post">
+		<form id="registration_form" action="{% url 'register:register' %}" method="post">
 			{% csrf_token %}
 
 			{{ tf.team.label }}<br>
