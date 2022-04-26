@@ -30,6 +30,7 @@ class register(View):
                 tf.save()
 
                 user = User.objects.create_user(Email, Email, Password)
+                user.save()
                 Team = tf.cleaned_data.get('team')
                 messages.success(request, '✔️ Tài khoản '+Team+' đã đăng ký thành công!')
                 return redirect('register:login')

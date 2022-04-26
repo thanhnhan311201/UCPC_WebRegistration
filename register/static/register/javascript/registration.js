@@ -27,5 +27,7 @@ $("#registration_form").submit(async (event) => {
         },
         body: JSON.stringify(data),
         })
-        .then(res => console.log(res))
+        .then(response => response.json())
+        .then(data => console.log(data.message))
+    // event.preventDefault();
 });
