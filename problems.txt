@@ -1,12 +1,2 @@
-1. Check đã đk trong database trên gg cloud function hay chưa? (gọi api vẫn được nhưng nó sẽ tốn lượt call api vì gg sheet limit số lần call)
-2. other.
-3. logo nhà tài trợ.
-4. validator trên browser.
-5. gg sheet api limit 60 requests/60s.
-6. bug ngầm lúc đk. (lỗi đăng ký same users)
-7. bug authentication. (do ảnh hưởng của bug số 6)
-
-* Thắc mắc:
-1. Tại sao tạo user mà hong dùng Username?
-2. Dùng serverless là dùng như thế nào?
-3. Tại sao lại dùng gg cloud function để xuất sheet?
+1. Bug 'CSRF verification failed. Request aborted'.
+2. Bug 'Django error: UNIQUE constraint failed: auth_user.username'
