@@ -16,13 +16,13 @@ NameRegex = RegexValidator(
 )
 
 # Create your models here.
-class School(models.Model):
-    id = models.AutoField(primary_key=True)
-    school = models.CharField(max_length=50, null=False, blank=False)
-    logo_path = models.CharField(max_length=100)
+# class School(models.Model):
+#     id = models.AutoField(primary_key=True)
+#     school = models.CharField(max_length=50, null=False, blank=False)
+#     logo_path = models.CharField(max_length=100)
     
-    def __str__(self):
-        return self.school
+#     def __str__(self):
+#         return self.school
 
 class Team(models.Model):
     id = models.AutoField(primary_key=True)
@@ -31,17 +31,17 @@ class Team(models.Model):
     member1 = models.CharField(max_length=30, null=False, blank=False, validators=[NameRegex])
     cmnd1 = models.CharField(max_length=12, unique=True, null=True, blank=False, validators=[CMNDandCCCD])
     phone1 = models.CharField(max_length=11, null=True, blank=False, validators=[NumberRegex])
-    school1 = models.ForeignKey(School, on_delete=models.CASCADE, related_name='school1')
+    school1 = models.CharField(max_length=100, null=True, blank=False)
 
     member2 = models.CharField(max_length=30, null=False, blank=False, validators=[NameRegex])
     cmnd2 = models.CharField(max_length=12, unique=True, null=True, blank=False, validators=[CMNDandCCCD])
     phone2 = models.CharField(max_length=11, null=True, blank=False, validators=[NumberRegex])
-    school2 = models.ForeignKey(School, on_delete=models.CASCADE, related_name='school2')
+    school2 = models.CharField(max_length=100, null=True, blank=False)
 
     member3 = models.CharField(max_length=30, null=False, blank=False, validators=[NameRegex])
     cmnd3 = models.CharField(max_length=12, unique=True, null=True, blank=False, validators=[CMNDandCCCD])
     phone3 = models.CharField(max_length=11, null=True, blank=False, validators=[NumberRegex])
-    school3 = models.ForeignKey(School, on_delete=models.CASCADE, related_name='school3')
+    school3 = models.CharField(max_length=100, null=True, blank=False)
 
     email = models.EmailField(null=False, blank=False, unique=True)
     paid = models.BooleanField(default=False)

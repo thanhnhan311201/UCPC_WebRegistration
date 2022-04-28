@@ -11,22 +11,22 @@ class teamForm(forms.ModelForm):
     member1 = forms.CharField(max_length = 30, label = 'Tên thành viên 1', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: Nguyễn Văn A' }))
     cmnd1 = forms.CharField(max_length=12, label = 'CMND/CCCD', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: 381932123'}))
     phone1 = forms.CharField(max_length=11, label = 'Số điện thoại', widget = forms.TextInput(attrs={'class': 'form-control', 'id': 'pos2', 'placeholder': 'Ví dụ: 0912345678'}))
+    school1 = forms.CharField(max_length=100, label='Trường', widget=forms.TextInput(attrs={'class': 'form-control', 'list': 'schools', 'placeholder': 'Ví dụ: Đại học Công nghệ Thông tin - ĐHQG TP.HCM'}))
 
     member2 = forms.CharField(max_length = 30, label = 'Tên thành viên 2', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: Nguyễn Văn B' }))
     cmnd2 = forms.CharField(max_length=12, label = 'CMND/CCCD', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: 381932123'}))
     phone2 = forms.CharField(max_length=11, label = 'Số điện thoại', widget = forms.TextInput(attrs={'class': 'form-control', 'id': 'pos3', 'placeholder': 'Ví dụ: 0912345678'}))
+    school2 = forms.CharField(max_length=100, label='Trường', widget=forms.TextInput(attrs={'class': 'form-control', 'list': 'schools', 'placeholder': 'Ví dụ: Đại học Công nghệ Thông tin - ĐHQG TP.HCM'}))
 
     member3 = forms.CharField(max_length = 30, label = 'Tên thành viên 3', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: Nguyễn Văn C' }))
     cmnd3 = forms.CharField(max_length=12, label = 'CMND/CCCD', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: 381932123'}))
     phone3 = forms.CharField(max_length=11, label = 'Số điện thoại', widget = forms.TextInput(attrs={'class': 'form-control', 'id': 'pos4', 'placeholder': 'Ví dụ: 0912345678'}))
+    school3 = forms.CharField(max_length=100, label='Trường', widget=forms.TextInput(attrs={'class': 'form-control', 'list': 'schools', 'placeholder': 'Ví dụ: Đại học Công nghệ Thông tin - ĐHQG TP.HCM'}))
 
-    email = forms.CharField(label= 'Email', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: abcd@efgh.com' }))
+    email = forms.CharField(label= 'Email', widget = forms.TextInput(attrs={'class': 'form-control','placeholder': 'Ví dụ: abcd@efgh.com' }))
     class Meta:
         model = Team
         fields = ['team', 'member1', 'cmnd1', 'phone1', 'school1', 'member2', 'cmnd2', 'phone2', 'school2', 'member3', 'cmnd3', 'phone3', 'school3', 'email']
-        widgets = { "school1":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' }),
-                    "school2":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' }),
-                    "school3":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' })}
     password = forms.CharField(max_length = 20, label = 'Mật khẩu', validators=[PasswordRegex], widget = forms.PasswordInput(attrs={'class': 'form-control', 'id': 'pos5'}))
 
     def __init__(self, *args, **kwargs):
@@ -82,18 +82,18 @@ class editForm(forms.ModelForm):
     member1 = forms.CharField(max_length = 30, label = 'Name of member 1', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'example: Nguyễn Văn A' }))
     cmnd1 = forms.CharField(max_length=12, label = 'CMND/CCCD', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'example: 381932123'}))
     phone1 = forms.CharField(max_length=11, label = 'Phone', widget = forms.TextInput(attrs={'class': 'form-control', 'id': 'pos2', 'placeholder': 'example: 0912345678'}))
+    school1 = forms.CharField(max_length=100, label='Trường', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: Đại học Công nghệ Thông tin - ĐHQG TP.HCM'}))
 
     member2 = forms.CharField(max_length = 30, label = 'Name of member 2', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'example: Nguyễn Văn B' }))
     cmnd2 = forms.CharField(max_length=12, label = 'CMND/CCCD', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'example: 381932123'}))
     phone2 = forms.CharField(max_length=11, label = 'Phone', widget = forms.TextInput(attrs={'class': 'form-control', 'id': 'pos3', 'placeholder': 'example: 0912345678'}))
+    school2 = forms.CharField(max_length=100, label='Trường', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: Đại học Công nghệ Thông tin - ĐHQG TP.HCM'}))
 
     member3 = forms.CharField(max_length = 30, label = 'Name of member 3', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'example: Nguyễn Văn C' }))
     cmnd3 = forms.CharField(max_length=12, label = 'CMND/CCCD', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'example: 381932123'}))
     phone3 = forms.CharField(max_length=11, label = 'Phone', widget = forms.TextInput(attrs={'class': 'form-control', 'id': 'pos4', 'placeholder': 'example: 0912345678'}))
+    school3 = forms.CharField(max_length=100, label='Trường', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: Đại học Công nghệ Thông tin - ĐHQG TP.HCM'}))
     class Meta:
         model = Team
         fields = ['team', 'member1', 'cmnd1', 'phone1', 'school1', 'member2', 'cmnd2', 'phone2', 'school2', 'member3', 'cmnd3', 'phone3', 'school3', 'email']
-        widgets = { "school1":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' }),
-                    "school2":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' }),
-                    "school3":forms.Select(attrs={'class': 'form-control', 'placeholder': 'Enter your school\'s name' })}
     
