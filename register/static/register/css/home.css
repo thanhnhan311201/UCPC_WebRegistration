@@ -424,9 +424,8 @@ text-decoration: none;
 
 
 /* sponsor */
-#sponsor .container {
-  border-top: 1px rgba(255, 255, 255, 0.2) solid;
-  margin-bottom: 50px;
+#sponsor {
+  min-height: 200px;
 }
 
 #sponsor h5
@@ -442,12 +441,14 @@ text-decoration: none;
 #sponsor .unit_logo .row    
 {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 #sponsor .unit_logo .row .unit {
-  width: 150px;
+  width: 120px;
+  margin-bottom: 10px;
 }
 
 #sponsor .unit_logo .unit .diamond_sponsor
