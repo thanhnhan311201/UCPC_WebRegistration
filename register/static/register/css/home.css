@@ -423,6 +423,48 @@ text-decoration: none;
 
 
 
+/* sponsor */
+#sponsor {
+  min-height: 200px;
+}
+
+#sponsor h5
+{
+  font-size: 25px;
+  font-weight: bolder;
+  color:white;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#sponsor .unit_logo .row    
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+}
+
+#sponsor .unit_logo .row .unit {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+#sponsor .unit_logo .unit .diamond_sponsor
+{
+  width: 100%;
+}
+
+#sponsor .unit_logo .unit .gold_sponsor
+{
+  width:80%;
+}
+
+#sponsor .unit_logo .unit .silver_sponsor
+{
+  width: 60%;
+}
 
 /* footer */
 #footer
