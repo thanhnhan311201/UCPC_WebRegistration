@@ -28,3 +28,11 @@ hr{
     background-color: #6d5593;
     border: none;
 }
+
+.valid {
+    color: #44E444 !important;
+}
+
+.invalid {
+    color: #FF0000 !important;
+}
