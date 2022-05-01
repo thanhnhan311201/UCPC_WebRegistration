@@ -1,3 +1,4 @@
 1. Bug 'CSRF verification failed. Request aborted'.
 2. Bug 'Django error: UNIQUE constraint failed: auth_user.username'.
-3. Logo nhà tài trợ.
+3. Bug chưa đăng nhập mà đã hiển thị nút đăng xuất.
+4. Logo nhà tài trợ.

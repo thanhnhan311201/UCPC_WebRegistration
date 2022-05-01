@@ -14,7 +14,7 @@
 
 <div class="form-group">
 	<div class="container">
-		<form action="{% url 'register:edit' %}" method="post">
+		<form action="{% url 'register:edit' %}" method="POST">
 			{% csrf_token %}
 			{{ ef.as_p }}
 			<button type="submit" class="btn btn-primary" style = "margin-top: 15px;">Save</button>
