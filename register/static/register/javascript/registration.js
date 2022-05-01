@@ -16,7 +16,7 @@ let cmnd2 = form.elements.namedItem("cmnd2");
 let phone2 = form.elements.namedItem("phone2");
 let member3 = form.elements.namedItem("member3");
 let cmnd3 = form.elements.namedItem("cmnd3");
-let phone3 = form.elements.namedItem("cmnd3");
+let phone3 = form.elements.namedItem("phone3");
 let email = form.elements.namedItem("email");
 let password = form.elements.namedItem("password");
 

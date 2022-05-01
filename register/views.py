@@ -9,6 +9,7 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
 from .models import Team
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
@@ -51,15 +52,14 @@ class register(View):
         if request.method == 'POST':
             tf = teamForm(request.POST)
             if tf.is_valid():
+                tf.save()
+
                 Username = request.POST['team']
                 Email = request.POST['email']
                 Password = request.POST['password']
-                tf.save()
-
                 user = User.objects.create_user(Email, Email, Password)
                 user.save()
 
-                idx = f'A{str(len(wks.get_all_values()) + 1)}'
                 data = np.array([[request.POST['team'],
                                   request.POST['email'],
                                   request.POST['password'], 
@@ -75,7 +75,11 @@ class register(View):
                                   request.POST['cmnd3'],
                                   request.POST['phone3'],
                                   request.POST['school3']]])
-                wks.update(idx, data.tolist())
+                try:
+                    idx = f'A{str(len(wks.get_all_values()) + 1)}'
+                    wks.update(idx, data.tolist())
+                except:
+                    pass
 
                 Team = tf.cleaned_data.get('team')
                 messages.success(request, '✔️ Tài khoản '+Team+' đã đăng ký thành công!')
