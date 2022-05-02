@@ -9,8 +9,8 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
 from .models import Team
 from django.contrib.auth.decorators import login_required
-from django.views.decorators.csrf import csrf_exempt
 
+import datetime
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 import numpy as np
@@ -45,7 +45,14 @@ def home(request):
 
 class register(View):
     def get(self, request):
-        context = {'tf': teamForm}
+        now = datetime.datetime.now()
+        deadline = datetime.datetime(2022, 5, 29)
+        time_remaining = deadline - now
+        if time_remaining.days < 0:
+            context = {'tf': teamForm, 'isTimeOver': True}
+        else:
+            context = {'tf': teamForm, 'isTimeOver': False}
+
         return render(request, 'register/register.html', context)
     
     def post(self, request):
