@@ -488,7 +488,7 @@ border-radius: 8px;
 
 #footer .sponsor .unit_logo .row    
 {
-  /* align-items: center; */
+  align-items: center;
   text-align: center;
 }
 /* 
@@ -498,26 +498,22 @@ border-radius: 8px;
 } */
 
 #footer .sponsor .unit_logo .unit .gold_sponsor {
-width: 100%;
+  width: 100%;
 }
 
-#footer .sponsor .unit_logo .unit .silver_sponsor
-{
-  /* height: 80px; */
-  /* height: 90%; */
-  width: 90%;
+#footer .sponsor .unit_logo .unit .silver_sponsor {
+  width: 100%;
 }
 
 #footer .sponsor .unit_logo .unit .bronze_sponsor {
-width: 80%;
+  width: 100%;
 }
 
 
-
-/* #footer .contact .row{
+#footer .contact .row{
   align-items: center;
   text-align: center;
-} */
+}
 
 #footer .contact .row img {
   width: 40px;
@@ -563,12 +559,12 @@ width: 80%;
 
   #footer .sponsor .unit_logo .unit .silver_sponsor
   {
-      width:80%;
+      width: 100%;
   }
 
   #footer .sponsor .unit_logo .unit .bronze_sponsor
   {
-      width: 65%;
+      width: 100%;
   }
 
   #footer .contact .row img {
@@ -642,12 +638,12 @@ width: 80%;
 
   #footer .sponsor .unit_logo .unit .silver_sponsor
   {
-      width:80%;
+      width: 100%;
   }
 
   #footer .sponsor .unit_logo .unit .bronze_sponsor
   {
-      width: 65%;
+      width: 100%;
   }
   #footer .contact .row img {
     width: 30px;
