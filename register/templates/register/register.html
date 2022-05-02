@@ -2,6 +2,14 @@
 {% load static %}
 
 {% block content %}
+
+{% if isTimeOver %}
+<div class="container" style="margin-top: 15px;">
+	<h3>Đã hết  thời gian đăng ký!</h3>
+</div>
+			
+<hr>
+{% else %}
 <div class="container" style="margin-top: 15px;">
 	<h3>Đăng ký</h3>
 </div>
@@ -111,4 +119,5 @@
 		</form>
 	</div>
 </div>
+{% endif %}
 {% endblock content %}
