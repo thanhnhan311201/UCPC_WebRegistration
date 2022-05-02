@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY','changeme')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(int(os.environ.get('DEBUG',1)))
 
-ALLOWED_HOSTS = ['*', 'ucpc-registerweb.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS_ENV = os.environ.get('ALLOWED_HOSTS')
 
 if ALLOWED_HOSTS_ENV:
@@ -135,6 +134,3 @@ STATICFILES_DIRS = [
 # MEDIA_ROOT = '/vol/web/media'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
-
-# active django-heroku
-django_heroku.settings(locals())
