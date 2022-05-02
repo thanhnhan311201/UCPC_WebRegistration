@@ -613,11 +613,18 @@ border-radius: 8px;
     font-size: 23px;
   }
   #footer h5
-{
+  {
   font-size: 16px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #organizers h5
+  {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (max-width: 543px)
@@ -657,6 +664,12 @@ border-radius: 8px;
     margin-bottom: 50px;
   }
 
+  #organizers h5
+  {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
   #organizers .unit_logo .unit .UIT {
     width:80%;
   }
