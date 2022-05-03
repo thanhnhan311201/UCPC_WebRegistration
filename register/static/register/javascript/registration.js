@@ -245,7 +245,7 @@ function validate (e) {
     }
 
     if (e.target.name == "rpassword") {
-        if (e.target.value == password.value) { 
+        if (e.target.value == password.value && PasswordRegex.test(e.target.value)) { 
             e.target.classList.add('valid_input');
             e.target.classList.remove('invalid_input');
             valid_rpassword.classList.add('valid_icon');

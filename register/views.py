@@ -35,7 +35,7 @@ def home(request):
 class register(View):
     def get(self, request):
         now = datetime.datetime.now()
-        deadline = datetime.datetime(2022, 5, 29)
+        deadline = datetime.datetime(2022, 5, 4)
         time_remaining = deadline - now
         if time_remaining.days < 0:
             context = {'tf': teamForm, 'isTimeOver': True}

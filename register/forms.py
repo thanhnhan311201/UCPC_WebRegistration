@@ -29,7 +29,7 @@ class teamForm(forms.ModelForm):
         model = Team
         fields = ['team', 'member1', 'cmnd1', 'phone1', 'school1', 'member2', 'cmnd2', 'phone2', 'school2', 'member3', 'cmnd3', 'phone3', 'school3', 'email']
     password = forms.CharField(max_length = 20, label = 'Mật khẩu', validators=[PasswordRegex], widget = forms.PasswordInput(attrs={'class': 'form-control', 'id': 'pos5', 'placeholder': 'Mật khẩu phải có ít nhất 6 chữ số, bao gồm chữ thường, chữ in hoa và chữ số'}))
-    rpassword = forms.CharField(max_length = 20, label = 'Nhập lại mật khẩu', widget = forms.PasswordInput(attrs={'class': 'form-control', 'id': 'pos6', 'placeholder': 'Nhập lại mật khẩu'}))
+    rpassword = forms.CharField(max_length = 20, label = 'Xác nhận mật khẩu', widget = forms.PasswordInput(attrs={'class': 'form-control', 'id': 'pos6', 'placeholder': 'Nhập lại mật khẩu'}))
 
     def __init__(self, *args, **kwargs):
         super(teamForm, self).__init__(*args, **kwargs)
