@@ -425,7 +425,7 @@ text-decoration: none;
 /* organizers */
 #organizers
 {
-  min-height: 170px;
+  min-height: 180px;
   background-color: #482b78;
 }
 
@@ -653,7 +653,7 @@ border-radius: 8px;
   {
       width: 100%;
   }
-  
+
   #footer .contact .row img {
     width: 30px;
     margin-top: 0px;
