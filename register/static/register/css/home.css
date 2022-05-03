@@ -497,15 +497,15 @@ border-radius: 8px;
   width: 100%;
 } */
 
-#footer .sponsor .unit_logo .unit .gold_sponsor {
+#footer .sponsor .unit_logo .unit .sponsor_1 {
   width: 100%;
 }
 
-#footer .sponsor .unit_logo .unit .silver_sponsor {
+#footer .sponsor .unit_logo .unit .sponsor_2 {
   width: 100%;
 }
 
-#footer .sponsor .unit_logo .unit .bronze_sponsor {
+#footer .sponsor .unit_logo .unit .sponsor_3 {
   width: 100%;
 }
 
@@ -552,17 +552,17 @@ border-radius: 8px;
   {
   width: 60px;
   } */
-  #footer .sponsor .unit_logo .unit .gold_sponsor
+  #footer .sponsor .unit_logo .unit .sponsor_1
   {
       width: 100%;
   }
 
-  #footer .sponsor .unit_logo .unit .silver_sponsor
+  #footer .sponsor .unit_logo .unit .sponsor_2
   {
       width: 100%;
   }
 
-  #footer .sponsor .unit_logo .unit .bronze_sponsor
+  #footer .sponsor .unit_logo .unit .sponsor_3
   {
       width: 100%;
   }
@@ -639,20 +639,21 @@ border-radius: 8px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  #footer .sponsor .unit_logo .unit .gold_sponsor
+  #footer .sponsor .unit_logo .unit .sponsor_1
   {
       width: 100%;
   }
 
-  #footer .sponsor .unit_logo .unit .silver_sponsor
+  #footer .sponsor .unit_logo .unit .sponsor_2
   {
       width: 100%;
   }
 
-  #footer .sponsor .unit_logo .unit .bronze_sponsor
+  #footer .sponsor .unit_logo .unit .sponsor_3
   {
       width: 100%;
   }
+  
   #footer .contact .row img {
     width: 30px;
     margin-top: 0px;
