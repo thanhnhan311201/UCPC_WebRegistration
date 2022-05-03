@@ -167,6 +167,7 @@
 				{{ tf.password }}
 				<i id="valid_password" class="fa-solid fa-circle-check" style="position: absolute; top: 35px; right: 40px; visibility: hidden;"></i>
 				<i id="invalid_password" class="fa-solid fa-circle-exclamation" style="position: absolute; top: 35px; right: 40px; visibility: hidden;"></i>
+				<input type="checkbox" style="margin: 10px 0;" onclick="showPassword()">Hiển thị mật khẩu
 				<small>{{ tf.password.errors }}</small>
 			</div>
 			<div class="rpassword">
@@ -174,6 +175,7 @@
 				{{ tf.rpassword }}
 				<i id="valid_rpassword" class="fa-solid fa-circle-check" style="position: absolute; top: 35px; right: 40px; visibility: hidden;"></i>
 				<i id="invalid_rpassword" class="fa-solid fa-circle-exclamation" style="position: absolute; top: 35px; right: 40px; visibility: hidden;"></i>
+				<input type="checkbox" style="margin: 10px 0;" onclick="showRPassword()">Hiển thị mật khẩu
 				<small>{{ tf.rpassword.errors }}</small>
 			</div>
 			<button type="submit" class="btn btn-primary" style="margin-top: 10px;">Đăng ký</button>

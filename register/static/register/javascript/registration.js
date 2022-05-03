@@ -259,6 +259,24 @@ function validate (e) {
     }
 }
 
+function showPassword() {
+    var pwd = document.getElementById("pos5");
+    if (pwd.type === "password") {
+        pwd.type = "text";
+    } else {
+        pwd.type = "password";
+    }
+}
+
+function showRPassword() {
+    var pwd = document.getElementById("pos6");
+    if (pwd.type === "password") {
+        pwd.type = "text";
+    } else {
+        pwd.type = "password";
+    }
+}
+
 // function showInpuBox(selectElement, other_popUp) {
 //     selectElement.addEventListener('change', (event) => {
 //         if (event.target.value == 6) {
