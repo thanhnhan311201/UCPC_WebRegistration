@@ -8,17 +8,58 @@ const EmailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\")
 
 
 let team = form.elements.namedItem("team");
+let valid_team = document.getElementById("valid_team");
+let invalid_team = document.getElementById("invalid_team");
+
 let member1 = form.elements.namedItem("member1");
+let valid_member1 = document.getElementById("valid_member1");
+let invalid_member1 = document.getElementById("invalid_member1");
+
 let cmnd1 = form.elements.namedItem("cmnd1");
+let valid_cmnd1 = document.getElementById("valid_cmnd1");
+let invalid_cmnd1 = document.getElementById("invalid_cmnd1");
+
 let phone1 = form.elements.namedItem("phone1");
+let valid_phone1 = document.getElementById("valid_phone1");
+let invalid_phone1 = document.getElementById("invalid_phone1");
+
 let member2 = form.elements.namedItem("member2");
+let valid_member2 = document.getElementById("valid_member2");
+let invalid_member2 = document.getElementById("invalid_member2");
+
 let cmnd2 = form.elements.namedItem("cmnd2");
+let valid_cmnd2 = document.getElementById("valid_cmnd2");
+let invalid_cmnd2 = document.getElementById("invalid_cmnd2");
+
 let phone2 = form.elements.namedItem("phone2");
+let valid_phone2 = document.getElementById("valid_phone2");
+let invalid_phone2 = document.getElementById("invalid_phone2");
+
 let member3 = form.elements.namedItem("member3");
+let valid_member3 = document.getElementById("valid_member3");
+let invalid_member3 = document.getElementById("invalid_member3");
+
 let cmnd3 = form.elements.namedItem("cmnd3");
+let valid_cmnd3 = document.getElementById("valid_cmnd3");
+let invalid_cmnd3 = document.getElementById("invalid_cmnd3");
+
 let phone3 = form.elements.namedItem("phone3");
+let valid_phone3 = document.getElementById("valid_phone3");
+let invalid_phone3 = document.getElementById("invalid_phone3");
+
 let email = form.elements.namedItem("email");
+let valid_email = document.getElementById("valid_email");
+let invalid_email = document.getElementById("invalid_email");
+
 let password = form.elements.namedItem("password");
+let valid_password = document.getElementById("valid_password");
+let invalid_password = document.getElementById("invalid_password");
+
+let rpassword = form.elements.namedItem("rpassword");
+let valid_rpassword = document.getElementById("valid_rpassword");
+let invalid_rpassword = document.getElementById("invalid_rpassword");
+
+
 
 team.addEventListener('input', validate);
 member1.addEventListener('input', validate);
@@ -32,125 +73,188 @@ cmnd3.addEventListener('input', validate);
 phone3.addEventListener('input', validate);
 email.addEventListener('input', validate);
 password.addEventListener('input', validate);
+rpassword.addEventListener('input', validate);
 
 function validate (e) {
     if (e.target.name == "team") {
         if (TeamRegex.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_team.classList.add('valid_icon');
+            invalid_team.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_team.classList.remove('valid_icon');
+            invalid_team.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "member1") {
         if (NameRegex.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_member1.classList.add('valid_icon');
+            invalid_member1.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_member1.classList.remove('valid_icon');
+            invalid_member1.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "member2") {
         if (NameRegex.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_member2.classList.add('valid_icon');
+            invalid_member2.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_member2.classList.remove('valid_icon');
+            invalid_member2.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "member3") {
         if (NameRegex.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_member3.classList.add('valid_icon');
+            invalid_member3.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_member3.classList.remove('valid_icon');
+            invalid_member3.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "cmnd1") {
         if (CMNDandCCCD.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_cmnd1.classList.add('valid_icon');
+            invalid_cmnd1.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_cmnd1.classList.remove('valid_icon');
+            invalid_cmnd1.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "cmnd2") {
         if (CMNDandCCCD.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_cmnd2.classList.add('valid_icon');
+            invalid_cmnd2.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_cmnd2.classList.remove('valid_icon');
+            invalid_cmnd2.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "cmnd3") {
         if (CMNDandCCCD.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_cmnd3.classList.add('valid_icon');
+            invalid_cmnd3.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_cmnd3.classList.remove('valid_icon');
+            invalid_cmnd3.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "phone1") {
         if (NumberRegex.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_phone1.classList.add('valid_icon');
+            invalid_phone1.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_phone1.classList.remove('valid_icon');
+            invalid_phone1.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "phone2") {
         if (NumberRegex.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_phone2.classList.add('valid_icon');
+            invalid_phone2.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_phone2.classList.remove('valid_icon');
+            invalid_phone2.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "phone3") {
         if (NumberRegex.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_phone3.classList.add('valid_icon');
+            invalid_phone3.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_phone3.classList.remove('valid_icon');
+            invalid_phone3.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "email") {
         if (EmailRegex.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_email.classList.add('valid_icon');
+            invalid_email.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_email.classList.remove('valid_icon');
+            invalid_email.classList.add('invalid_icon');
         }
     }
 
     if (e.target.name == "password") {
         if (PasswordRegex.test(e.target.value)) {
-            e.target.classList.add('valid');
-            e.target.classList.remove('invalid');
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_password.classList.add('valid_icon');
+            invalid_password.classList.remove('invalid_icon');
         } else {
-            e.target.classList.add('invalid');
-            e.target.classList.remove('valid');
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_password.classList.remove('valid_icon');
+            invalid_password.classList.add('invalid_icon');
+        }
+    }
+
+    if (e.target.name == "rpassword") {
+        if (e.target.value == password.value) { 
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_rpassword.classList.add('valid_icon');
+            invalid_rpassword.classList.remove('invalid_icon');
+        } else {
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_rpassword.classList.remove('valid_icon');
+            invalid_rpassword.classList.add('invalid_icon');
         }
     }
 }

@@ -1,3 +1,4 @@
+from distutils.command.clean import clean
 from django import forms
 from .models import Team
 from django.core.validators import RegexValidator
@@ -27,14 +28,15 @@ class teamForm(forms.ModelForm):
     class Meta:
         model = Team
         fields = ['team', 'member1', 'cmnd1', 'phone1', 'school1', 'member2', 'cmnd2', 'phone2', 'school2', 'member3', 'cmnd3', 'phone3', 'school3', 'email']
-    password = forms.CharField(max_length = 20, label = 'Mật khẩu', validators=[PasswordRegex], widget = forms.PasswordInput(attrs={'class': 'form-control', 'id': 'pos5'}))
+    password = forms.CharField(max_length = 20, label = 'Mật khẩu', validators=[PasswordRegex], widget = forms.PasswordInput(attrs={'class': 'form-control', 'id': 'pos5', 'placeholder': 'Mật khẩu phải có ít nhất 6 chữ số, bao gồm chữ thường, chữ in hoa và chữ số'}))
+    rpassword = forms.CharField(max_length = 20, label = 'Nhập lại mật khẩu', widget = forms.PasswordInput(attrs={'class': 'form-control', 'id': 'pos6', 'placeholder': 'Nhập lại mật khẩu'}))
 
     def __init__(self, *args, **kwargs):
         super(teamForm, self).__init__(*args, **kwargs)
 
-        self.fields['school1'].label = "Trường"
-        self.fields['school2'].label = "Trường"
-        self.fields['school3'].label = "Trường"
+        # self.fields['school1'].label = "Trường"
+        # self.fields['school2'].label = "Trường"
+        # self.fields['school3'].label = "Trường"
 
         # add custom error messages
         self.fields['team'].error_messages.update({
@@ -73,6 +75,17 @@ class teamForm(forms.ModelForm):
         self.fields['password'].error_messages.update({
             'invalid': '⚠️ Mật khẩu không hợp lệ! (Mật khẩu hợp lệ có ít nhất 6 chữ số, bao gồm chữ thường, chữ in hoa và chữ số)',
         })
+
+    def clean(self):
+        cleaned_data = super(teamForm, self).clean()
+        valpwd = cleaned_data.get('password')
+        valrpwd = cleaned_data.get('rpassword')
+        
+        if valpwd and valrpwd:
+            if valpwd != valrpwd:
+                error_msg = '⚠️ Mật khẩu không khớp!'
+                self.add_error('rpassword', error_msg)
+
 
 class loginForm(forms.Form):
     email = forms.CharField(widget = forms.TextInput(attrs={'class': 'form-control'}))

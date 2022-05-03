@@ -29,10 +29,31 @@ hr{
     border: none;
 }
 
-.valid {
-    color: #44E444 !important;
+.team, .member1, .cmnd1, .phone1, .member2, .cmnd2, .phone2, .member3, .cmnd3, .phone3, .email, .password, .rpassword {
+    position: relative;
 }
 
-.invalid {
-    color: #FF0000 !important;
+#registration_form i {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.valid_input {
+    border: 2px solid #2ecc71 !important;
+}
+
+.invalid_input {
+    border: 2px solid #e74c3c !important;
+}
+
+.valid_icon {
+    color: #2ecc71 !important;
+    visibility: visible !important;
+}
+
+.invalid_icon {
+    color: #e74c3c !important;
+    visibility: visible !important;
 }

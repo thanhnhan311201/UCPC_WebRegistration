@@ -25,96 +25,157 @@
 		<!-- <form id="registration_form" action="{% url 'register:register' %}" method="POST"> -->
 		<form id="registration_form" method="POST">
 			{% csrf_token %}
+			
+			<div class="team">
+				{{ tf.team.label }}<br>
+				{{ tf.team }}
+				<i id="valid_team" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_team" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.team.errors }}</small><br>
+			</div>
 
-			{{ tf.team.label }}<br>
-			{{ tf.team }}
-			<small>{{ tf.team.errors }}</small><br>
+			<div class="member1">
+				{{ tf.member1.label }}<br>
+				{{ tf.member1 }}
+				<i id="valid_member1" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_member1" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.member1.errors }}</small>
+			</div>
+			<div class="cmnd1">
+				{{ tf.cmnd1.label }}<br>
+				{{ tf.cmnd1 }}
+				<i id="valid_cmnd1" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_cmnd1" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.cmnd1.errors }}</small>
+			</div>
+			<div class="phone1">
+				{{ tf.phone1.label }}<br>
+				{{ tf.phone1 }}
+				<i id="valid_phone1" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_phone1" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.phone1.errors }}</small>
+			</div>
+			<div class="school1">
+				{{ tf.school1.label }}<br>
+				{{ tf.school1 }}
+				<datalist id="schools">
+					<option>Trường Đại học Công nghệ Thông tin - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Bách khoa - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Quốc Tế - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh</option>
+					<option>Học viện Công nghệ Bưu Chính Viễn thông</option>
+					<option>Trường Đại học Sư Phạm Thành phố Hồ Chí Minh</option>
+					<option>Trường Đại học Công nghiệp Thành phố Hồ Chí Minh</option>
+					<option>Trường Đại học Thủ Dầu Một</option>
+					<option>Trường Trung học phổ thông Gia Định</option>
+				</datalist>	
+				<small>{{ tf.school1.errors }}</small><br>
+			</div>
 
-			{{ tf.member1.label }}<br>
-			{{ tf.member1 }}
-			<small>{{ tf.member1.errors }}</small>
-			{{ tf.cmnd1.label }}<br>
-			{{ tf.cmnd1 }}
-			<small>{{ tf.cmnd1.errors }}</small>
-			{{ tf.phone1.label }}<br>
-			{{ tf.phone1 }}
-			<small>{{ tf.phone1.errors }}</small>
-			{{ tf.school1.label }}<br>
-			{{ tf.school1 }}
-			<datalist id="schools">
-				<option>Trường Đại học Công nghệ Thông tin - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Bách khoa - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Quốc Tế - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh</option>
-				<option>Học viện Công nghệ Bưu Chính Viễn thông</option>
-				<option>Trường Đại học Sư Phạm Thành phố Hồ Chí Minh</option>
-				<option>Trường Đại học Công nghiệp Thành phố Hồ Chí Minh</option>
-				<option>Trường Đại học Thủ Dầu Một</option>
-				<option>Trường Trung học phổ thông Gia Định</option>
-			</datalist>	
-			<small>{{ tf.school1.errors }}</small><br>
+			<div class="member2">
+				{{ tf.member2.label }}<br>
+				{{ tf.member2 }}
+				<i id="valid_member2" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_member2" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.member2.errors }}</small>
+			</div>
+			<div class="cmnd2">
+				{{ tf.cmnd2.label }}<br>
+				{{ tf.cmnd2 }}
+				<i id="valid_cmnd2" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_cmnd2" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.cmnd2.errors }}</small>
+			</div>
+			<div class="phone2">
+				{{ tf.phone2.label }}<br>
+				{{ tf.phone2 }}
+				<i id="valid_phone2" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_phone2" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.phone2.errors }}</small>
+			</div>
+			<div class="school2">
+				{{ tf.school2.label }}<br>
+				{{ tf.school2 }}
+				<datalist id="schools">
+					<option>Trường Đại học Công nghệ Thông tin - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Bách khoa - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Quốc Tế - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh</option>
+					<option>Học viện Công nghệ Bưu Chính Viễn thông</option>
+					<option>Trường Đại học Sư Phạm Thành phố Hồ Chí Minh</option>
+					<option>Trường Đại học Công nghiệp Thành phố Hồ Chí Minh</option>
+					<option>Trường Đại học Thủ Dầu Một</option>
+					<option>Trường Trung học phổ thông Gia Định</option>
+				</datalist>	
+				<small>{{ tf.school2.errors }}</small><br>
+			</div>
 
-			{{ tf.member2.label }}<br>
-			{{ tf.member2 }}
-			<small>{{ tf.member2.errors }}</small>
-			{{ tf.cmnd2.label }}<br>
-			{{ tf.cmnd2 }}
-			<small>{{ tf.cmnd2.errors }}</small>
-			{{ tf.phone2.label }}<br>
-			{{ tf.phone2 }}
-			<small>{{ tf.phone2.errors }}</small>
-			{{ tf.school2.label }}<br>
-			{{ tf.school2 }}
-			<datalist id="schools">
-				<option>Trường Đại học Công nghệ Thông tin - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Bách khoa - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Quốc Tế - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh</option>
-				<option>Học viện Công nghệ Bưu Chính Viễn thông</option>
-				<option>Trường Đại học Sư Phạm Thành phố Hồ Chí Minh</option>
-				<option>Trường Đại học Công nghiệp Thành phố Hồ Chí Minh</option>
-				<option>Trường Đại học Thủ Dầu Một</option>
-				<option>Trường Trung học phổ thông Gia Định</option>
-			</datalist>	
-			<small>{{ tf.school2.errors }}</small><br>
+			<div class="member3">
+				{{ tf.member3.label }}<br>
+				{{ tf.member3 }}
+				<i id="valid_member3" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_member3" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.member3.errors }}</small>
+			</div>
+			<div class="cmnd3">
+				{{ tf.cmnd3.label }}<br>
+				{{ tf.cmnd3 }}
+				<i id="valid_cmnd3" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_cmnd3" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.cmnd3.errors }}</small>
+			</div>
+			<div class="phone3">
+				{{ tf.phone3.label }}<br>
+				{{ tf.phone3 }}
+				<i id="valid_phone3" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_phone3" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.phone3.errors }}</small>
+			</div>
+			<div class="school3">
+				{{ tf.school3.label }}<br>
+				{{ tf.school3 }}
+				<datalist id="schools">
+					<option>Trường Đại học Công nghệ Thông tin - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Bách khoa - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Quốc Tế - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia TP.HCM</option>
+					<option>Trường Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh</option>
+					<option>Học viện Công nghệ Bưu Chính Viễn thông</option>
+					<option>Trường Đại học Sư Phạm Thành phố Hồ Chí Minh</option>
+					<option>Trường Đại học Công nghiệp Thành phố Hồ Chí Minh</option>
+					<option>Trường Đại học Thủ Dầu Một</option>
+					<option>Trường Trung học phổ thông Gia Định</option>
+				</datalist>	
+				<small>{{ tf.school3.errors }}</small><br>
+			</div>
 
-			{{ tf.member3.label }}<br>
-			{{ tf.member3 }}
-			<small>{{ tf.member3.errors }}</small>
-			{{ tf.cmnd3.label }}<br>
-			{{ tf.cmnd3 }}
-			<small>{{ tf.cmnd3.errors }}</small>
-			{{ tf.phone3.label }}<br>
-			{{ tf.phone3 }}
-			<small>{{ tf.phone3.errors }}</small>
-			{{ tf.school3.label }}<br>
-			{{ tf.school3 }}
-			<datalist id="schools">
-				<option>Trường Đại học Công nghệ Thông tin - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Bách khoa - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Khoa học Tự nhiên - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Quốc Tế - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Khoa học Xã hội và Nhân văn - Đại học Quốc gia TP.HCM</option>
-				<option>Trường Đại học Sư phạm Kỹ thuật Thành phố Hồ Chí Minh</option>
-				<option>Học viện Công nghệ Bưu Chính Viễn thông</option>
-				<option>Trường Đại học Sư Phạm Thành phố Hồ Chí Minh</option>
-				<option>Trường Đại học Công nghiệp Thành phố Hồ Chí Minh</option>
-				<option>Trường Đại học Thủ Dầu Một</option>
-				<option>Trường Trung học phổ thông Gia Định</option>
-			</datalist>	
-			<small>{{ tf.school3.errors }}</small><br>
-
-			{{ tf.email.label }}<br>
-			{{ tf.email }}
-			<small>{{ tf.email.errors }}</small>
-			<p style="margin-top: 4px;">ℹ️ Email đăng ký được Ban Tổ Chức dùng để liên lạc với đội thi.</p>
-			{{ tf.password.label }}<br>
-			{{ tf.password }}
-			<small>{{ tf.password.errors }}</small>
+			<div class="email">
+				{{ tf.email.label }}<br>
+				{{ tf.email }}
+				<i id="valid_email" class="fa-solid fa-circle-check"></i>
+				<i id="invalid_email" class="fa-solid fa-circle-exclamation"></i>
+				<small>{{ tf.email.errors }}</small>
+				<p style="margin-top: 4px;">ℹ️ Email đăng ký được Ban Tổ Chức dùng để liên lạc với đội thi.</p>
+			</div>
+			<div class="password">
+				{{ tf.password.label }}<br>
+				{{ tf.password }}
+				<i id="valid_password" class="fa-solid fa-circle-check" style="position: absolute; top: 35px; right: 40px; visibility: hidden;"></i>
+				<i id="invalid_password" class="fa-solid fa-circle-exclamation" style="position: absolute; top: 35px; right: 40px; visibility: hidden;"></i>
+				<small>{{ tf.password.errors }}</small>
+			</div>
+			<div class="rpassword">
+				{{ tf.rpassword.label }}<br>
+				{{ tf.rpassword }}
+				<i id="valid_rpassword" class="fa-solid fa-circle-check" style="position: absolute; top: 35px; right: 40px; visibility: hidden;"></i>
+				<i id="invalid_rpassword" class="fa-solid fa-circle-exclamation" style="position: absolute; top: 35px; right: 40px; visibility: hidden;"></i>
+				<small>{{ tf.rpassword.errors }}</small>
+			</div>
 			<button type="submit" class="btn btn-primary" style="margin-top: 10px;">Đăng ký</button>
 		</form>
 	</div>
