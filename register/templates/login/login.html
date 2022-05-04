@@ -18,9 +18,9 @@
 		<form method="POST">
 			{% csrf_token %}
 			{{ lf.as_p }}
-			<input id="checkbox_login" type="checkbox" style="margin: 10px 5px 10px 0;" onclick="showLoginPassword()">Hiển thị mật khẩu
+			<input id="checkbox_login" type="checkbox" style="margin: 10px 5px 10px 0;" onclick="showLoginPassword()">Hiển thị mật khẩu<br>
+			<button type="submit" class="btn btn-primary" style = "margin-top: 15px;">Đăng nhập</button>
 		</form>
-		<button type="submit" class="btn btn-primary" style = "margin-top: 15px;">Đăng nhập</button>
 	</div>
 </div>
 
