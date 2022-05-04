@@ -71,11 +71,15 @@ class register(View):
                                   request.POST['cmnd3'],
                                   request.POST['phone3'],
                                   request.POST['school3']]])
+                times = 0
                 try:
-                    idx = f'A{str(len(wks.get_all_values()) + 1)}'
-                    wks.update(idx, data.tolist())
+                    for i in range(100):
+                        idx = f'A{str(len(wks.get_all_values()) + 1)}'
+                        wks.update(idx, data.tolist())
+                        times += 1
                 except:
                     pass
+                print(times)
 
                 Team = tf.cleaned_data.get('team')
                 messages.success(request, '✔️ Tài khoản '+Team+' đã đăng ký thành công!')

@@ -259,6 +259,17 @@ function validate (e) {
     }
 }
 
+function showLoginPassword() {
+    var checkBox = document.getElementById("checkbox_login");
+    var pwd = document.getElementById("id_password");
+
+    if (checkBox.checked == true) {
+        pwd.type = "text";
+    } else {
+        pwd.type = "password";
+    }
+}
+
 function showPassword() {
     var checkBox = document.getElementById("checkbox_1");
     var pwd = document.getElementById("pos5");
