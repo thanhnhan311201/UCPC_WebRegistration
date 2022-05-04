@@ -11,21 +11,21 @@ from .models import Team
 from django.contrib.auth.decorators import login_required
 
 import datetime
-# from oauth2client.service_account import ServiceAccountCredentials
-# import gspread
-# import numpy as np
+from oauth2client.service_account import ServiceAccountCredentials
+import gspread
+import numpy as np
 
 
-# scope =["https://spreadsheets.google.com/feeds",
-#       'https://www.googleapis.com/auth/spreadsheets',
-#       "https://www.googleapis.com/auth/drive.file",
-#       "https://www.googleapis.com/auth/drive"]
-# creds = ServiceAccountCredentials.from_json_keyfile_name('service_account.json', scope)
+scope =["https://spreadsheets.google.com/feeds",
+      'https://www.googleapis.com/auth/spreadsheets',
+      "https://www.googleapis.com/auth/drive.file",
+      "https://www.googleapis.com/auth/drive"]
+creds = ServiceAccountCredentials.from_json_keyfile_name('service_account.json', scope)
 
-# _name = "List_of_teams"
-# client = gspread.authorize(creds)
-# spreadsheet = client.open(_name)
-# wks = spreadsheet.worksheet("demo1")
+_name = "List_of_teams"
+client = gspread.authorize(creds)
+spreadsheet = client.open(_name)
+wks = spreadsheet.worksheet("Demo_Lists")
 
 # Create your views here.
 def home(request):
@@ -35,7 +35,7 @@ def home(request):
 class register(View):
     def get(self, request):
         now = datetime.datetime.now()
-        deadline = datetime.datetime(2022, 5, 4)
+        deadline = datetime.datetime(2022, 5, 25)
         time_remaining = deadline - now
         if time_remaining.days < 0:
             context = {'tf': teamForm, 'isTimeOver': True}
@@ -56,26 +56,26 @@ class register(View):
                 user = User.objects.create_user(Email, Email, Password)
                 user.save()
 
-                # data = np.array([[request.POST['team'],
-                #                   request.POST['email'],
-                #                   request.POST['password'], 
-                #                   request.POST['member1'],
-                #                   request.POST['cmnd1'],
-                #                   request.POST['phone1'],
-                #                   request.POST['school1'],
-                #                   request.POST['member2'],
-                #                   request.POST['cmnd2'],
-                #                   request.POST['phone2'],
-                #                   request.POST['school2'],
-                #                   request.POST['member3'],
-                #                   request.POST['cmnd3'],
-                #                   request.POST['phone3'],
-                #                   request.POST['school3']]])
-                # try:
-                #     idx = f'A{str(len(wks.get_all_values()) + 1)}'
-                #     wks.update(idx, data.tolist())
-                # except:
-                #     pass
+                data = np.array([[request.POST['team'],
+                                  request.POST['email'],
+                                  request.POST['password'], 
+                                  request.POST['member1'],
+                                  request.POST['cmnd1'],
+                                  request.POST['phone1'],
+                                  request.POST['school1'],
+                                  request.POST['member2'],
+                                  request.POST['cmnd2'],
+                                  request.POST['phone2'],
+                                  request.POST['school2'],
+                                  request.POST['member3'],
+                                  request.POST['cmnd3'],
+                                  request.POST['phone3'],
+                                  request.POST['school3']]])
+                try:
+                    idx = f'A{str(len(wks.get_all_values()) + 1)}'
+                    wks.update(idx, data.tolist())
+                except:
+                    pass
 
                 Team = tf.cleaned_data.get('team')
                 messages.success(request, '✔️ Tài khoản '+Team+' đã đăng ký thành công!')

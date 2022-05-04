@@ -260,8 +260,10 @@ function validate (e) {
 }
 
 function showPassword() {
+    var checkBox = document.getElementById("checkbox_1");
     var pwd = document.getElementById("pos5");
-    if (pwd.type === "password") {
+
+    if (checkBox.checked == true) {
         pwd.type = "text";
     } else {
         pwd.type = "password";
@@ -269,8 +271,10 @@ function showPassword() {
 }
 
 function showRPassword() {
+    var checkBox = document.getElementById("checkbox_2");
     var pwd = document.getElementById("pos6");
-    if (pwd.type === "password") {
+
+    if (checkBox.checked == true) {
         pwd.type = "text";
     } else {
         pwd.type = "password";

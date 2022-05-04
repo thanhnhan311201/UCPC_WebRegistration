@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'register.apps.RegisterConfig',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -78,16 +79,25 @@ WSGI_APPLICATION = 'ucpc.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+# SQLite Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd35qqd0f9vogch',
-        'HOST' : 'ec2-3-211-6-217.compute-1.amazonaws.com',
-        'PORT' : 5432,
-        'USER' : 'wwryjwekzvjujd',
-        'PASSWORD' : 'e378b0637e243ae0e3500b8bfd3d5fe298c5feb5e4d840b9c3fd58d8994ba69b',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Postgres Database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'dft5eki8798v79',
+#         'HOST' : 'ec2-34-231-177-125.compute-1.amazonaws.com',
+#         'PORT' : 5432,
+#         'USER' : 'qbkpwttsprmyuo',
+#         'PASSWORD' : 'c42c22078e382d3b73e54dd96ca330d75a62eda63f41853c5532d7e8eacc67f7',
+#     }
+# }
 
 
 # Password validation
