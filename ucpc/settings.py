@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-_v9a$!$g(&$$h3b@fq*mp&pp7rcscw9^y+626%o60e1gwetx76')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(int(os.environ.get('DEBUG', 1)))
+DEBUG = bool(int(os.environ.get('DEBUG', 0)))
 
 ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS_ENV = os.environ.get('ALLOWED_HOSTS')
@@ -80,24 +80,24 @@ WSGI_APPLICATION = 'ucpc.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 # SQLite Database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# Postgres Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dft5eki8798v79',
-        'HOST' : 'ec2-34-231-177-125.compute-1.amazonaws.com',
-        'PORT' : 5432,
-        'USER' : 'qbkpwttsprmyuo',
-        'PASSWORD' : 'c42c22078e382d3b73e54dd96ca330d75a62eda63f41853c5532d7e8eacc67f7',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Postgres Database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'dft5eki8798v79',
+#         'HOST' : 'ec2-34-231-177-125.compute-1.amazonaws.com',
+#         'PORT' : 5432,
+#         'USER' : 'qbkpwttsprmyuo',
+#         'PASSWORD' : 'c42c22078e382d3b73e54dd96ca330d75a62eda63f41853c5532d7e8eacc67f7',
+#     }
+# }
 
 
 # Password validation
