@@ -80,24 +80,24 @@ WSGI_APPLICATION = 'ucpc.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 # SQLite Database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-# Postgres Database
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'dft5eki8798v79',
-#         'HOST' : 'ec2-34-231-177-125.compute-1.amazonaws.com',
-#         'PORT' : 5432,
-#         'USER' : 'qbkpwttsprmyuo',
-#         'PASSWORD' : 'c42c22078e382d3b73e54dd96ca330d75a62eda63f41853c5532d7e8eacc67f7',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+# Postgres Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ucpc_project',
+        'HOST' : 'localhost',
+        'PORT' : '',
+        'USER' : 'ucpc_admin',
+        'PASSWORD' : 'Ucpcadmin@database',
+    }
+}
 
 
 # Password validation
@@ -138,13 +138,7 @@ USE_TZ = True
 # https://www.geeksforgeeks.org/how-to-load-and-use-static-files-in-django/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "register", "static"),
-]
-
-# STATIC_URL = '/static/static/'
-# STATIC_ROOT = '/vol/web/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # MEDIA_URL = '/static/media/'
 # MEDIA_ROOT = '/vol/web/media'
