@@ -138,7 +138,7 @@ USE_TZ = True
 # https://www.geeksforgeeks.org/how-to-load-and-use-static-files-in-django/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # MEDIA_URL = '/static/media/'
 # MEDIA_ROOT = '/vol/web/media'
