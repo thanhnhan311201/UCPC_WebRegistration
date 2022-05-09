@@ -25,7 +25,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name('service_account.json',
 _name = "List_of_teams"
 client = gspread.authorize(creds)
 spreadsheet = client.open(_name)
-wks = spreadsheet.worksheet("Demo_Lists")
+wks = spreadsheet.worksheet("List_teams")
 
 # Create your views here.
 def home(request):
