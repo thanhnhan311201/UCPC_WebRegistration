@@ -177,7 +177,7 @@ left: -31px;
 .timeline .container::before {
 content: '';
 position: absolute;
-width: 78px;
+width: 82px;
 height: 2px;
 top: calc(50% - 1px);
 right: -22px;
@@ -272,7 +272,7 @@ color: white;
   left: 33px;
 }
 .timeline .container.left {
-  left: -13.5%;
+  left: -8.5%;
 }
 .timeline .container {
   width: 100%;
@@ -281,17 +281,17 @@ color: white;
 }
 
 .timeline .container.right {
-  left: -13.5%;
+  left: -8.5%;
 }
 
 .timeline .container.left::after, 
 .timeline .container.right::after {
-  left: 82px;
+  left: 58px;
 }
 
 .timeline .container.left::before,
 .timeline .container.right::before {
-  left: 100px;
+  left: 68px;
   border-color: transparent #006E51 transparent transparent;
 }
 
@@ -310,7 +310,7 @@ color: white;
 .timeline .container.left .content,
 .timeline .container.right .content {
   padding: 30px 30px 30px 90px;
-  border-radius: 500px 0 0 500px;
+  /* border-radius: 500px 0 0 500px; */
 }
 }
 /* Style for timeline */
@@ -589,6 +589,11 @@ border-radius: 8px;
 
 @media only screen and (max-width: 450px)
 {
+  .navbar .btn {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
   #introduction_slider {
       height: auto;
   }

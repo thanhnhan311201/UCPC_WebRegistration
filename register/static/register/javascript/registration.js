@@ -19,7 +19,11 @@ let cmnd1 = form.elements.namedItem("cmnd1");
 let valid_cmnd1 = document.getElementById("valid_cmnd1");
 let invalid_cmnd1 = document.getElementById("invalid_cmnd1");
 
-let phone1 = form.elements.namedItem("phone1");margin-bottom: 20px;
+let phone1 = form.elements.namedItem("phone1");
+let valid_phone1 = document.getElementById("valid_phone1");
+let invalid_phone1 = document.getElementById("invalid_phone1");
+
+let member2 = form.elements.namedItem("member2");
 let valid_member2 = document.getElementById("valid_member2");
 let invalid_member2 = document.getElementById("invalid_member2");
 

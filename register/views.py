@@ -14,7 +14,9 @@ import datetime
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 import numpy as np
+from argon2 import PasswordHasher
 
+ph = PasswordHasher()
 
 scope =["https://spreadsheets.google.com/feeds",
       'https://www.googleapis.com/auth/spreadsheets',
@@ -58,7 +60,7 @@ class register(View):
 
                 data = np.array([[request.POST['team'],
                                   request.POST['email'],
-                                  request.POST['password'], 
+                                  ph.hash(request.POST['password']), 
                                   request.POST['member1'],
                                   request.POST['cmnd1'],
                                   request.POST['phone1'],
