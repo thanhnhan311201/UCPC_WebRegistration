@@ -12,7 +12,7 @@ body {
     padding: 0;
     overflow-y: scroll;
 
-    background-color: #482b78;
+    background-color: #130820;
     color: white;
 }
 
@@ -24,18 +24,17 @@ nav > .collapse > ul > li > a {
 }
 
 nav {
-    background-color: #482b78;
+    background-color: #130820;
 }
 
 .navbar .btn {
-    background-color: #fcf951ff;
-    color: #422057ff;
-
+    background-color: #4cf2d2;
+    color: #130820;
 }
 
 .navbar .btn:hover {
-    color: #482b78;
-    background-color: #4cf2d2;
+    color: #130820;
+    background-color: #fff;
 }
 
 .navbar-dark .navbar-collapse .navbar-nav .nav-item .nav-link {

@@ -17,7 +17,7 @@ p {
 /* Style for countdown */
 #countdown
 {
-  background-color: #482b78;   
+  background-color: #130820;   
   border-bottom: 1px solid;
   border-color: rgba(255, 255, 255, 0.2);
   min-height: 200px;
@@ -41,7 +41,7 @@ p {
 
 #countdown #countdown_info h4
 {
-  color: white;
+  color: fff;
   font-size: 27px;
 }
 
@@ -82,7 +82,7 @@ background-color: white;
 text-align: center;
 align-items: center;
 height: 120px;
-border: 5px #482b78 solid ;
+border: 5px #130820 solid ;
 }
 #countdown_system .row .clock div {
 padding-top: 15px ;
@@ -92,7 +92,7 @@ padding-top: 15px ;
 {
 /* padding-top: 10px; */
 text-align: center;
-color: #482b78;
+color: #130820;
 text-transform: uppercase;
 font-size: 25px;
 font-weight: bold;
@@ -101,7 +101,7 @@ font-weight: bold;
 {
 /* padding-top: px; */
 text-align: center;
-color: #482b78;
+color: #130820;
 font-weight: bold;
 font-size: 30px;
 }
@@ -135,7 +135,7 @@ border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
 content: '';
 position: absolute;
 width: 2px;
-background: #006E51;
+background: #fff;
 top: 0;
 bottom: 0;
 left: 50%;
@@ -150,11 +150,11 @@ width: 50%;
 }
 
 .timeline .container.left {
-left: -25%;
+left: -27%;
 }
 
 .timeline .container.right {
-left: 25%;
+left: 27%;
 }
 
 .timeline .container::after {
@@ -163,30 +163,30 @@ position: absolute;
 width: 16px;
 height: 16px;
 top: calc(50% - 8px);
-right: -8px;
-background: #ffffff;
-border: 2px solid #006E51;
+right: -31px;
+background: #fff;
+border: 2px solid #fff;
 border-radius: 16px;
 z-index: 1;
 }
 
 .timeline .container.right::after {
-left: -8px;
+left: -31px;
 }
 
 .timeline .container::before {
 content: '';
 position: absolute;
-width: 50px;
+width: 78px;
 height: 2px;
 top: calc(50% - 1px);
-right: 8px;
-background: #006E51;
+right: -22px;
+background: #fff;
 z-index: 1;
 }
 
 .timeline .container.right::before {
-left: 8px;
+left: -23px;
 }
 
 .timeline .container .date {
@@ -212,17 +212,17 @@ left: -75px;
 
 .timeline .container .icon {
 position: absolute;
-display: inline-block;
+display: inline-block;  
 width: 40px;
 height: 40px;
 padding: 9px 0;
 top: calc(50% - 20px);
-background: #F6D155;
-border: 2px solid #006E51;
+background: #fff;
+border: 2px solid #fff;
 border-radius: 40px;
 text-align: center;
 font-size: 18px;
-color: #006E51;
+color: #130820;
 z-index: 1;
 }
 
@@ -236,21 +236,21 @@ left: 56px;
 
 .timeline .container .content {
 padding: 30px 90px 30px 30px;
-background: #F6D155;
+background: #4CF2D2;
 position: relative;
-border-radius: 0 500px 500px 0;
+/* border-radius: 0 500px 500px 0; */
 }
 
 .timeline .container.right .content {
 padding: 30px 30px 30px 90px;
-border-radius: 500px 0 0 500px;
+/* border-radius: 500px 0 0 500px; */
 }
 
 .timeline .container .content h2 {
 margin: 0 0 10px 0;
 font-size: 18px;
 font-weight: normal;
-color: #006E51;
+color: #130820;
 }
 
 .timeline .container .content p {
@@ -381,10 +381,10 @@ color: white;
 
 #reward_information p
 {
-  background-color: #fcf951ff;
-  color: #422057ff;
+  background-color: #4cf2d2;
+  color: #130820;
   
-  border-radius: 8px;
+  /* border-radius: 8px; */
   height: 64px;
   text-align: center;
   min-width: 214px;
@@ -407,8 +407,8 @@ color: white;
 }
 
 #reward #reward_information p:hover {
-background-color: #4cf2d2;
-color: #482b78;
+background-color: #fff;
+color: #130820;
 border-style: none;
 text-decoration: unset;
 }
@@ -426,7 +426,7 @@ text-decoration: none;
 #organizers
 {
   min-height: 180px;
-  background-color: #482b78;
+  background-color: #130820;
 }
 
 #organizers h5
@@ -464,7 +464,7 @@ width: 120%;
   background-repeat: no-repeat;
   background-size: auto;
   min-height: 250px;
-  background-color: #482b78;
+  background-color: #130820;
   background-position: bottom center;
 }
 
@@ -606,7 +606,7 @@ border-radius: 8px;
   
   #countdown #countdown_info h4
   {
-      color: #482b78;
+      color: #fff;
       font-size: 18px;
   }
 

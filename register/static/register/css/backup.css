@@ -1,10 +1,16 @@
+#footer .organizers .unit_logo .row    
+{
+  align-items: center;
+  text-align: center;
+}
+
 #footer .organizers .unit_logo .unit .UIT {
-    width: 100%;
+    width: 90%;
 }
   
 #footer .organizers .unit_logo .unit .HSV {
     width: 80%;
-}
+} 
   
 #footer .organizers .unit_logo .unit .CS {
     width: 120%;
@@ -13,29 +19,29 @@
 @media only screen and (max-width: 768px)
 {
   #footer .organizers .unit_logo .unit .UIT {
-    width:80%;
+    width: 90%;
   }
 
   #footer .organizers .unit_logo .unit .HSV {
-    width: 65%;
+    width: 80%;
   }
 
   #footer .organizers .unit_logo .unit .CS {
-    width: 100%;
+    width: 120%;
   }
 }
 
 @media only screen and (max-width: 543px)
 {
     #footer .organizers .unit_logo .unit .UIT {
-        width:80%;
+        width: 90%;
     }
     
     #footer .organizers .unit_logo .unit .HSV {
-        width: 65%;
+        width: 80%;
     }
     
     #footer .organizers .unit_logo .unit .CS {
-        width: 100%;
+        width: 120%;
     }
 }
