@@ -14,7 +14,9 @@
 </div>
 
 {% for message in messages %}
-<p id="messages">{{message}}</p>
+<div class="container">
+	<p id="messages" style="margin: 0 0 15px 0;">{{message}}</p>
+</div>
 {% endfor %}
 
 <div class="form-group">
@@ -175,7 +177,7 @@
 				<input id="checkbox_2" type="checkbox" style="margin: 10px 5px 10px 0;" onclick="showRPassword()">Hiển thị mật khẩu
 				<small>{{ tf.rpassword.errors }}</small>
 			</div>
-			<input id="agree_check" onchange="document.getElementById('submit_btn').disabled = !this.checked;" type="checkbox" style="margin: 10px 5px 10px 0;" onclick="showRPassword()">Tôi đã đọc và đồng ý với <a style ="color:#4CF2D2;" target="_blank" href="https://drive.google.com/file/d/1rErKbMxKskTyqWUm8w-9lfKyr6WQ_wnI/view?usp=sharing"><b>quy định</b></a> của cuộc thi.<br>
+			<input id="agree_check" onchange="document.getElementById('submit_btn').disabled = !this.checked;" type="checkbox" style="margin: 10px 5px 10px 0;" onclick="showRPassword()">Tôi đã đọc và đồng ý với <a style ="color:#4CF2D2;" target="_blank" href="https://drive.google.com/file/d/17Vly7HvPSQXLs-Pe_QmAFmkpAS_Ezrmq/view?usp=sharing"><b>quy định</b></a> của cuộc thi.<br>
 			<button disabled type="submit" id="submit_btn" class="btn btn-primary" style="margin-top: 10px; background-color: #4CF2D2; border-color: #4CF2D2; color: black;">Đăng ký</button>
 		</form>
 	</div>
