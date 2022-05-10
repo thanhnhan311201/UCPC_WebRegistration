@@ -100,7 +100,7 @@ function validate (e) {
             e.target.classList.add('invalid_input');
             e.target.classList.remove('valid_input');
             valid_member1.classList.remove('valid_icon');
-            invalid_member1.classList.add('invalid_icon');
+            invalid_member1.classList.add('invalid_icon');unique
         }
     }
 
