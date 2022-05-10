@@ -428,7 +428,7 @@ text-decoration: none;
 #organizers h5
 {
   font-size: 25px;
-  font-weight: bolder;
+  font-weight: bold;
   color:white;
   text-align: center;
   margin-top: 30px;
@@ -443,25 +443,66 @@ text-decoration: none;
 
 #organizers .unit_logo .unit .UIT
 {
-  width: 100%;
+  width: 60%;
 }
 
 #organizers .unit_logo .unit .HSV {
-width: 80%;
+  width: 55%;
 }
 
 #organizers .unit_logo .unit .CS {
-width: 120%;
+  width: 80%;
+}
+
+/* sponsor */
+#sponsors
+{
+  min-height: 205px;
+  background-color: #130820;
+}
+
+#sponsors h5
+{
+  font-size: 25px;
+  font-weight: bold;
+  color:white;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#sponsors .unit_logo .row    
+{
+  align-items: center;
+  text-align: center;
+}
+
+#sponsors .unit_logo .unit .sponsor1
+{
+  width: 85%;
+}
+
+#sponsors .unit_logo .unit .sponsor2 {
+  width: 85%;
+}
+
+#sponsors .unit_logo .unit .sponsor3 {
+  width: 85%;
+}
+
+#sponsors .unit_logo .unit .sponsor4 {
+  width: 85%;
 }
 
 /* footer */
 #footer
 {
-  background-repeat: no-repeat;
-  background-size: auto;
+  /* background-image: url(/static/register/images/footer/background.png); */
+  /* background-repeat: no-repeat; */
+  /* background-size: auto; */
   min-height: 250px;
   background-color: #130820;
-  background-position: bottom center;
+  /* background-position: bottom center; */
 }
 
 #footer .container {
@@ -476,7 +517,7 @@ border-radius: 8px;
 #footer h5
 {
   font-size: 25px;
-  font-weight: bolder;
+  font-weight: bold;
   color:white;
   text-align: center;
   margin-top: 30px;
@@ -493,18 +534,6 @@ border-radius: 8px;
 {
   width: 100%;
 } */
-
-#footer .sponsor .unit_logo .unit .sponsor_1 {
-  width: 100%;
-}
-
-#footer .sponsor .unit_logo .unit .sponsor_2 {
-  width: 100%;
-}
-
-#footer .sponsor .unit_logo .unit .sponsor_3 {
-  width: 100%;
-}
 
 #footer .contact .row{
   align-items: center;
@@ -548,37 +577,40 @@ border-radius: 8px;
   {
   width: 60px;
   } */
-  #footer .sponsor .unit_logo .unit .sponsor_1
-  {
-      width: 100%;
-  }
-
-  #footer .sponsor .unit_logo .unit .sponsor_2
-  {
-      width: 100%;
-  }
-
-  #footer .sponsor .unit_logo .unit .sponsor_3
-  {
-      width: 100%;
-  }
 
   #footer .contact .row img {
     width: 40px;
     margin-top: 0px;
     margin-bottom: 50px;
   }
-
-  #organizers .unit_logo .unit .UIT {
-    width:80%;
+  
+  #organizers .unit_logo .unit .UIT
+  {
+    width: 60%;
   }
-
+  
   #organizers .unit_logo .unit .HSV {
-    width: 65%;
+    width: 55%;
+  }
+  
+  #organizers .unit_logo .unit .CS {
+    width: 80%;
   }
 
-  #organizers .unit_logo .unit .CS {
-    width: 100%;
+  #sponsors .unit_logo .unit .sponsor1 {
+    width: 85%;
+  }
+
+  #sponsors .unit_logo .unit .sponsor2 {
+    width: 85%;
+  }
+
+  #sponsors .unit_logo .unit .sponsor3 {
+    width: 85%;
+  }
+
+  #sponsors .unit_logo .unit .sponsor4 {
+    width: 85%;
   }
 }
 
@@ -631,6 +663,13 @@ border-radius: 8px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
+
+  #sponsors h5
+  {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (max-width: 543px)
@@ -643,26 +682,6 @@ border-radius: 8px;
     font-size: 16px;
     margin-top: 30px;
     margin-bottom: 30px;
-  }
-  #footer .sponsor .unit_logo .unit .sponsor_1
-  {
-      width: 100%;
-  }
-
-  #footer .sponsor .unit_logo .unit .sponsor_2
-  {
-      width: 100%;
-  }
-
-  #footer .sponsor .unit_logo .unit .sponsor_3
-  {
-      width: 100%;
-  }
-
-  #footer .contact .row img {
-    width: 30px;
-    margin-top: 0px;
-    margin-bottom: 50px;
   }
 
   #footer .contact .row img {
@@ -677,18 +696,43 @@ border-radius: 8px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  #organizers .unit_logo .unit .UIT {
-    width:80%;
+  #organizers .unit_logo .unit .UIT
+  {
+    width: 60%;
   }
-
+  
   #organizers .unit_logo .unit .HSV {
-    width: 65%;
+    width: 55%;
+  }
+  
+  #organizers .unit_logo .unit .CS {
+    width: 80%;
   }
 
-  #organizers .unit_logo .unit .CS {
-    width: 100%;
+  #sponsors .unit_logo .unit .sponsor1 {
+    width: 85%;
+  }
+
+  #sponsors h5
+  {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #sponsors .unit_logo .unit .sponsor2 {
+    width: 85%;
+  }
+
+  #sponsors .unit_logo .unit .sponsor3 {
+    width: 85%;
+  }
+
+  #sponsors .unit_logo .unit .sponsor4 {
+    width: 85%;
   }
 }
+
 @media only screen and (max-width: 992px) 
 {
   #footer .contact .row img {
