@@ -362,7 +362,7 @@ color: white;
 }
 
 #reward_information {
-  text-align: center;
+  /* text-align: center; */
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -371,7 +371,7 @@ color: white;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: end;
   overflow-x: hidden;
 }
 
@@ -687,6 +687,13 @@ border-radius: 8px;
 
   #organizers .unit_logo .unit .CS {
     width: 100%;
+  }
+
+  #trans_infor {
+    margin-top: 15px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
   }
 }
 @media only screen and (max-width: 992px) 

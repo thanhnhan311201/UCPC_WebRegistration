@@ -2,6 +2,7 @@ const form = document.querySelector('#registration_form');
 const TeamRegex = /\b\S*[AĂÂÁẮẤÀẰẦẢẲẨÃẴẪẠẶẬĐEÊÉẾÈỀẺỂẼỄẸỆIÍÌỈĨỊOÔƠÓỐỚÒỒỜỎỔỞÕỖỠỌỘỢUƯÚỨÙỪỦỬŨỮỤỰYÝỲỶỸỴAĂÂÁẮẤÀẰẦẢẲẨÃẴẪẠẶẬĐEÊÉẾÈỀẺỂẼỄẸỆIÍÌỈĨỊOÔƠÓỐỚÒỒỜỎỔỞÕỖỠỌỘỢUƯÚỨÙỪỦỬŨỮỤỰYÝỲỶỸỴAĂÂÁẮẤÀẰẦẢẲẨÃẴẪẠẶẬĐEÊÉẾÈỀẺỂẼỄẸỆIÍÌỈĨỊOÔƠÓỐỚÒỒỜỎỔỞÕỖỠỌỘỢUƯÚỨÙỪỦỬŨỮỤỰYÝỲỶỸỴAĂÂÁẮẤÀẰẦẢẲẨÃẴẪẠẶẬĐEÊÉẾÈỀẺỂẼỄẸỆIÍÌỈĨỊOÔƠÓỐỚÒỒỜỎỔỞÕỖỠỌỘỢUƯÚỨÙỪỦỬŨỮỤỰYÝỲỶỸỴAĂÂÁẮẤÀẰẦẢẲẨÃẴẪẠẶẬĐEÊÉẾÈỀẺỂẼỄẸỆIÍÌỈĨỊOÔƠÓỐỚÒỒỜỎỔỞÕỖỠỌỘỢUƯÚỨÙỪỦỬŨỮỤỰYÝỲỶỸỴAĂÂÁẮẤÀẰẦẢẲẨÃẴẪẠẶẬĐEÊÉẾÈỀẺỂẼỄẸỆIÍÌỈĨỊOÔƠÓỐỚÒỒỜỎỔỞÕỖỠỌỘỢUƯÚỨÙỪỦỬŨỮỤỰYÝỲỶỸỴA-Z]+\S*\b/;
 const NumberRegex = /^([0-9]{10}|[0-9]{11})$/;
 const CMNDandCCCD = /^([0-9]{9}|[0-9]{12})$/;
+const MSSVRegex = /^[a-zA-Z0-9]+$/;
 const NameRegex = /^([a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]{1,}\s{0,}){2,7}$/;
 const PasswordRegex = /^(?=.{6,})(?=.*[a-z]+)(?=.*\d+)(?=.*[A-Z]+)[ -~]*$/;
 const EmailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -15,6 +16,10 @@ let member1 = form.elements.namedItem("member1");
 let valid_member1 = document.getElementById("valid_member1");
 let invalid_member1 = document.getElementById("invalid_member1");
 
+let mssv1 = form.elements.namedItem("mssv1");
+let valid_mssv1 = document.getElementById("valid_mssv1");
+let invalid_mssv1 = document.getElementById("invalid_mssv1");
+
 let cmnd1 = form.elements.namedItem("cmnd1");
 let valid_cmnd1 = document.getElementById("valid_cmnd1");
 let invalid_cmnd1 = document.getElementById("invalid_cmnd1");
@@ -27,6 +32,10 @@ let member2 = form.elements.namedItem("member2");
 let valid_member2 = document.getElementById("valid_member2");
 let invalid_member2 = document.getElementById("invalid_member2");
 
+let mssv2 = form.elements.namedItem("mssv2");
+let valid_mssv2 = document.getElementById("valid_mssv2");
+let invalid_mssv2 = document.getElementById("invalid_mssv2");
+
 let cmnd2 = form.elements.namedItem("cmnd2");
 let valid_cmnd2 = document.getElementById("valid_cmnd2");
 let invalid_cmnd2 = document.getElementById("invalid_cmnd2");
@@ -38,6 +47,10 @@ let invalid_phone2 = document.getElementById("invalid_phone2");
 let member3 = form.elements.namedItem("member3");
 let valid_member3 = document.getElementById("valid_member3");
 let invalid_member3 = document.getElementById("invalid_member3");
+
+let mssv3 = form.elements.namedItem("mssv3");
+let valid_mssv3 = document.getElementById("valid_mssv3");
+let invalid_mssv3 = document.getElementById("invalid_mssv3");
 
 let cmnd3 = form.elements.namedItem("cmnd3");
 let valid_cmnd3 = document.getElementById("valid_cmnd3");
@@ -63,12 +76,15 @@ let invalid_rpassword = document.getElementById("invalid_rpassword");
 
 team.addEventListener('input', validate);
 member1.addEventListener('input', validate);
+mssv1.addEventListener('input', validate);
 cmnd1.addEventListener('input', validate);
 phone1.addEventListener('input', validate);
 member2.addEventListener('input', validate);
+mssv2.addEventListener('input', validate);
 cmnd2.addEventListener('input', validate);
 phone2.addEventListener('input', validate);
 member3.addEventListener('input', validate);
+mssv3.addEventListener('input', validate);
 cmnd3.addEventListener('input', validate);
 phone3.addEventListener('input', validate);
 email.addEventListener('input', validate);
@@ -120,6 +136,48 @@ function validate (e) {
 
     if (e.target.name == "member3") {
         if (NameRegex.test(e.target.value)) {
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_member3.classList.add('valid_icon');
+            invalid_member3.classList.remove('invalid_icon');
+        } else {
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_member3.classList.remove('valid_icon');
+            invalid_member3.classList.add('invalid_icon');
+        }
+    }
+
+    if (e.target.name == "mssv1") {
+        if (MSSVRegex.test(e.target.value)) {
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_member1.classList.add('valid_icon');
+            invalid_member1.classList.remove('invalid_icon');
+        } else {
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_member1.classList.remove('valid_icon');
+            invalid_member1.classList.add('invalid_icon');unique
+        }
+    }
+
+    if (e.target.name == "mssv2") {
+        if (MSSVRegex.test(e.target.value)) {
+            e.target.classList.add('valid_input');
+            e.target.classList.remove('invalid_input');
+            valid_member2.classList.add('valid_icon');
+            invalid_member2.classList.remove('invalid_icon');
+        } else {
+            e.target.classList.add('invalid_input');
+            e.target.classList.remove('valid_input');
+            valid_member2.classList.remove('valid_icon');
+            invalid_member2.classList.add('invalid_icon');
+        }
+    }
+
+    if (e.target.name == "mssv3") {
+        if (MSSVRegex.test(e.target.value)) {
             e.target.classList.add('valid_input');
             e.target.classList.remove('invalid_input');
             valid_member3.classList.add('valid_icon');

@@ -7,7 +7,7 @@ th, td {
     padding: 8px;
 }
 
-th {
+th, td {
     text-align: center;
 }
 
@@ -25,7 +25,7 @@ table {
 
 hr{
     height: 1px;
-    background-color: #6d5593;
+    background-color: rgba(255,255,255,.2);
     border: none;
 }
 
@@ -56,4 +56,12 @@ hr{
 .invalid_icon {
     color: #e74c3c !important;
     visibility: visible !important;
+}
+
+.login_email {
+    font-size: 20px;
+}
+
+.login_pass {
+    font-size: 20px;
 }
