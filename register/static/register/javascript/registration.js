@@ -150,13 +150,13 @@ function validate (e) {
         if (MSSVRegex.test(e.target.value)) {
             e.target.classList.add('valid_input');
             e.target.classList.remove('invalid_input');
-            valid_member1.classList.add('valid_icon');
-            invalid_member1.classList.remove('invalid_icon');
+            valid_mssv1.classList.add('valid_icon');
+            invalid_mssv1.classList.remove('invalid_icon');
         } else {
             e.target.classList.add('invalid_input');
             e.target.classList.remove('valid_input');
-            valid_member1.classList.remove('valid_icon');
-            invalid_member1.classList.add('invalid_icon');unique
+            valid_mssv1.classList.remove('valid_icon');
+            invalid_mssv1.classList.add('invalid_icon');unique
         }
     }
 
@@ -164,13 +164,13 @@ function validate (e) {
         if (MSSVRegex.test(e.target.value)) {
             e.target.classList.add('valid_input');
             e.target.classList.remove('invalid_input');
-            valid_member2.classList.add('valid_icon');
-            invalid_member2.classList.remove('invalid_icon');
+            valid_mssv2.classList.add('valid_icon');
+            invalid_mssv2.classList.remove('invalid_icon');
         } else {
             e.target.classList.add('invalid_input');
             e.target.classList.remove('valid_input');
-            valid_member2.classList.remove('valid_icon');
-            invalid_member2.classList.add('invalid_icon');
+            valid_mssv2.classList.remove('valid_icon');
+            invalid_mssv2.classList.add('invalid_icon');
         }
     }
 
@@ -178,13 +178,13 @@ function validate (e) {
         if (MSSVRegex.test(e.target.value)) {
             e.target.classList.add('valid_input');
             e.target.classList.remove('invalid_input');
-            valid_member3.classList.add('valid_icon');
-            invalid_member3.classList.remove('invalid_icon');
+            valid_mssv3.classList.add('valid_icon');
+            invalid_mssv3.classList.remove('invalid_icon');
         } else {
             e.target.classList.add('invalid_input');
             e.target.classList.remove('valid_input');
-            valid_member3.classList.remove('valid_icon');
-            invalid_member3.classList.add('invalid_icon');
+            valid_mssv3.classList.remove('valid_icon');
+            invalid_mssv3.classList.add('invalid_icon');
         }
     }
 

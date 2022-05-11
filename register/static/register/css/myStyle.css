@@ -29,13 +29,13 @@ hr{
     border: none;
 }
 
-.team, .member1, .cmnd1, .phone1, .member2, .cmnd2, .phone2, .member3, .cmnd3, .phone3, .email, .password, .rpassword {
+.team, .member1, .cmnd1, .phone1, .member2, .cmnd2, .phone2, .member3, .cmnd3, .phone3, .email, .password, .rpassword, .mssv1, .mssv2, .mssv3 {
     position: relative;
 }
 
 #registration_form i {
     position: absolute;
-    top: 35px;
+    top: 40px;
     right: 10px;
     visibility: hidden;
 }
