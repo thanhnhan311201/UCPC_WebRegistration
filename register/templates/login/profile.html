@@ -39,24 +39,28 @@
 		{% for item in data %}
 		<tr>
 			<th>Họ và Tên</th>
+			<th>MSSV</th>
 			<th>CMND/CCCD</th>
 			<th>Số điện thoại</th>
 			<th>Trường</th>
 		</tr>
 		<tr>
 			<td style="text-align: left;">{{ item.member1 }} (trưởng)</td>
+			<td>{{ item.mssv1 }}</td>
 			<td>{{ item.cmnd1 }}</td>
 			<td>{{ item.phone1 }}</td>
 			<td>{{ item.school1 }}</td>
 		</tr>
 		<tr>
 			<td style="text-align: left;">{{ item.member2 }}</td>
+			<td>{{ item.mssv2 }}</td>
 			<td>{{ item.cmnd2 }}</td>
 			<td>{{ item.phone2 }}</td>
 			<td>{{ item.school2 }}</td>
 		</tr>
 		<tr>
 			<td style="text-align: left;">{{ item.member3 }}</td>
+			<td>{{ item.mssv3 }}</td>
 			<td>{{ item.cmnd3 }}</td>
 			<td>{{ item.phone3 }}</td>
 			<td>{{ item.school3 }}</td>

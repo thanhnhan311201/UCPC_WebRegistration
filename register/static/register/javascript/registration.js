@@ -72,8 +72,6 @@ let rpassword = form.elements.namedItem("rpassword");
 let valid_rpassword = document.getElementById("valid_rpassword");
 let invalid_rpassword = document.getElementById("invalid_rpassword");
 
-
-
 team.addEventListener('input', validate);
 member1.addEventListener('input', validate);
 mssv1.addEventListener('input', validate);
