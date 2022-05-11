@@ -18,16 +18,19 @@ from argon2 import PasswordHasher
 
 ph = PasswordHasher()
 
-scope =["https://spreadsheets.google.com/feeds",
-      'https://www.googleapis.com/auth/spreadsheets',
-      "https://www.googleapis.com/auth/drive.file",
-      "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name('service_account.json', scope)
+try:
+    scope =["https://spreadsheets.google.com/feeds",
+        'https://www.googleapis.com/auth/spreadsheets',
+        "https://www.googleapis.com/auth/drive.file",
+        "https://www.googleapis.com/auth/drive"]
+    creds = ServiceAccountCredentials.from_json_keyfile_name('service_account.json', scope)
 
-_name = "List_of_teams"
-client = gspread.authorize(creds)
-spreadsheet = client.open(_name)
-wks = spreadsheet.worksheet("List_teams")
+    _name = "List_of_teams"
+    client = gspread.authorize(creds)
+    spreadsheet = client.open(_name)
+    wks = spreadsheet.worksheet("List_teams")
+except:
+    pass
 
 # Create your views here.
 def home(request):
