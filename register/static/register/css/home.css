@@ -584,6 +584,11 @@ border-radius: 8px;
 
 @media only screen and (max-width: 450px)
 {
+  #reward_information {
+    margin-top: 50px;
+    justify-content: center;
+  }
+
   .navbar .btn {
     margin-left: 20px;
     margin-right: 0;
