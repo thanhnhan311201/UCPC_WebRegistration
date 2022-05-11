@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 PasswordRegex = RegexValidator(r'^(?=.{6,})(?=.*[a-z]+)(?=.*\d+)(?=.*[A-Z]+)[ -~]*$')
 
 class teamForm(forms.ModelForm):
-    team = forms.CharField(max_length = 30, label = 'Tên đội',widget = forms.TextInput(attrs={'class': 'form-control', 'id': 'pos1', 'placeholder': 'Ví dụ: Team01' }))
+    team = forms.CharField(max_length = 30, label = 'Tên đội',widget = forms.TextInput(attrs={'class': 'form-control', 'id': 'pos1', 'placeholder': 'Chữ cái đầu tiên trong tên đội phải viết hoa. Ví dụ: Team01' }))
     
     member1 = forms.CharField(max_length = 30, label = 'Tên đội trưởng', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ví dụ: Nguyễn Văn A' }))
     mssv1 = forms.CharField(max_length=30, label = 'Mã số sinh viên', widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Mã số sinh viên bao gồm chữ số hoặc chữ thường và chữ số. Ví dụ: 21520001'}))
