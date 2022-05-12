@@ -80,7 +80,7 @@ class register(View):
                                   request.POST['phone3'],
                                   request.POST['school3']]])
                 try:
-                    idx = f'A{str(len(wks.get_all_values()) + 1)}'
+                    idx = f'B{str(len(wks.get_all_values()) + 1)}'
                     wks.update(idx, data.tolist())
                 except:
                     pass
