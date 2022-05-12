@@ -701,6 +701,10 @@ border-radius: 8px;
     flex-direction: row !important;
     justify-content: center !important;
   }
+
+  #footer {
+    background-size: 160%;
+  }
 }
 @media only screen and (max-width: 992px) 
 {
