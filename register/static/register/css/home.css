@@ -447,19 +447,20 @@ text-decoration: none;
 }
 
 #organizers .unit_logo .unit .HSV {
-width: 80%;
+  width: 80%;
 }
 
 #organizers .unit_logo .unit .CS {
-width: 120%;
+  width: 120%;
 }
 
 /* footer */
 #footer
 {
+  background-image: url(/static/register/images/footer/background.png);
   background-repeat: no-repeat;
   background-size: auto;
-  min-height: 250px;
+  min-height: 470px;
   background-color: #130820;
   background-position: bottom center;
 }
