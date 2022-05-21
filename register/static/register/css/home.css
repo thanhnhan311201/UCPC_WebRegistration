@@ -322,6 +322,10 @@ color: white;
   padding-bottom: 40px;
 }
 
+#rules .container {
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+}
+
 /* UCPC */
 /* Style for reward */
 
@@ -419,10 +423,11 @@ text-decoration: none;
 
 
 /* organizers */
-#organizers
+#organizers .container
 {
-  min-height: 180px;
+  min-height: 210px;
   background-color: #130820;
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
 }
 
 #organizers h5
@@ -441,17 +446,75 @@ text-decoration: none;
   text-align: center;
 }
 
-#organizers .unit_logo .unit .UIT
-{
-  width: 100%;
+#organizers .unit_logo .unit .UIT {
+  width: 40%;
 }
 
 #organizers .unit_logo .unit .HSV {
-  width: 80%;
+  width: 32%;
 }
 
 #organizers .unit_logo .unit .CS {
-  width: 120%;
+  width: 53%;
+}
+
+#organizers .unit_logo .unit .UCPC {
+  width: 30%;
+}
+
+/* sponsors */
+#sponsors .container
+{
+  min-height: 250px;
+  background-color: #130820;
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+}
+
+#sponsors h5
+{
+  font-size: 25px;
+  font-weight: bolder;
+  color:white;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#sponsors .unit_logo .row    
+{
+  align-items: center;
+  text-align: center;
+}
+
+#sponsors .gold_sponsor .unit_logo .unit .Autonomous {
+  width: 80%;
+}
+
+#sponsors .gold_sponsor .unit_logo .unit .Citynow {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+#sponsors .gold_sponsor .unit_logo .unit .Gianty {
+  width: 80%;
+}
+
+#sponsors .gold_sponsor .unit_logo .unit .TMA {
+  width: 80%;
+}
+
+#sponsors .gold_sponsor .unit_logo .unit .McKinsey {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+#sponsors .silver {
+  margin-left: 90px;
+}
+
+#sponsors .silver_sponsor .unit_logo .unit .sun_studio {
+  padding-top: 35px;
+  width: 70%;
 }
 
 /* footer */
@@ -460,19 +523,15 @@ text-decoration: none;
   background-image: url(/static/register/images/footer/background.png);
   background-repeat: no-repeat;
   background-size: auto;
-  min-height: 470px;
+  min-height: 400px;
   background-color: #130820;
   background-position: bottom center;
 }
 
-#footer .container {
+/* #footer .container {
   border-top: 1px rgba(255, 255, 255, 0.2) solid;
-}
-
-/* #footer .container .unit_logo .unit {
-background-color: white;
-border-radius: 8px;
 } */
+
 
 #footer h5
 {
@@ -484,27 +543,8 @@ border-radius: 8px;
   margin-bottom: 30px;
 }
 
-#footer .sponsor .unit_logo .row    
-{
-  align-items: center;
-  text-align: center;
-}
-/* 
-#footer .sponsor .unit_logo .unit img
-{
-  width: 100%;
-} */
-
-#footer .sponsor .unit_logo .unit .sponsor_1 {
-  width: 100%;
-}
-
-#footer .sponsor .unit_logo .unit .sponsor_2 {
-  width: 100%;
-}
-
-#footer .sponsor .unit_logo .unit .sponsor_3 {
-  width: 100%;
+#footer .support img {
+  width: 16%;
 }
 
 #footer .contact .row{
@@ -549,20 +589,6 @@ border-radius: 8px;
   {
   width: 60px;
   } */
-  #footer .sponsor .unit_logo .unit .sponsor_1
-  {
-      width: 100%;
-  }
-
-  #footer .sponsor .unit_logo .unit .sponsor_2
-  {
-      width: 100%;
-  }
-
-  #footer .sponsor .unit_logo .unit .sponsor_3
-  {
-      width: 100%;
-  }
 
   #footer .contact .row img {
     width: 40px;
@@ -571,15 +597,19 @@ border-radius: 8px;
   }
 
   #organizers .unit_logo .unit .UIT {
-    width:80%;
-  }
-
-  #organizers .unit_logo .unit .HSV {
-    width: 65%;
-  }
-
-  #organizers .unit_logo .unit .CS {
     width: 100%;
+  }
+  
+  #organizers .unit_logo .unit .HSV {
+    width: 90%;
+  }
+  
+  #organizers .unit_logo .unit .CS {
+    width: 130%;
+  }
+  
+  #organizers .unit_logo .unit .UCPC {
+    width: 90%;
   }
 }
 
@@ -646,53 +676,81 @@ border-radius: 8px;
   }
   #footer h5
   {
-    font-size: 16px;
+    font-size: 20px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  #footer .sponsor .unit_logo .unit .sponsor_1
-  {
-      width: 100%;
-  }
-
-  #footer .sponsor .unit_logo .unit .sponsor_2
-  {
-      width: 100%;
-  }
-
-  #footer .sponsor .unit_logo .unit .sponsor_3
-  {
-      width: 100%;
-  }
 
   #footer .contact .row img {
-    width: 30px;
+    width: 35px;
     margin-top: 0px;
     margin-bottom: 50px;
   }
 
-  #footer .contact .row img {
-    width: 40px;
-    margin-top: 0px;
-    margin-bottom: 50px;
+  #organizers .container
+  {
+    min-height: 150px;
   }
 
   #organizers h5
   {
-    font-size: 16px;
+    font-size: 20px;
     margin-top: 30px;
     margin-bottom: 30px;
   }
+
   #organizers .unit_logo .unit .UIT {
-    width:80%;
-  }
-
-  #organizers .unit_logo .unit .HSV {
-    width: 65%;
-  }
-
-  #organizers .unit_logo .unit .CS {
     width: 100%;
+  }
+  
+  #organizers .unit_logo .unit .HSV {
+    width: 88%;
+  }
+  
+  #organizers .unit_logo .unit .CS {
+    width: 125%;
+  }
+  
+  #organizers .unit_logo .unit .UCPC {
+    width: 85%;
+  }
+
+  #sponsors h5
+  {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #sponsors .gold_sponsor .unit_logo .unit .Autonomous {
+    width: 100%;
+  }
+  
+  #sponsors .gold_sponsor .unit_logo .unit .Citynow {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #sponsors .gold_sponsor .unit_logo .unit .Gianty {
+    width: 100%;
+  }
+  
+  #sponsors .gold_sponsor .unit_logo .unit .TMA {
+    width: 100%;
+  }
+  
+  #sponsors .gold_sponsor .unit_logo .unit .McKinsey {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #sponsors .silver {
+    margin-left: 0 !important;
+  }
+
+  #sponsors .silver_sponsor .unit_logo .unit .sun_studio {
+    padding-top: 0;
+    width: 30%;
   }
 
   #trans_infor {
@@ -704,12 +762,17 @@ border-radius: 8px;
 
   #footer {
     background-size: 160%;
+    min-height: 230px;
+  }
+
+  #footer .support img {
+    width: 38%;
   }
 }
 @media only screen and (max-width: 992px) 
 {
   #footer .contact .row img {
-    width: 40px;
+    width: 35px;
     margin-top: 0px;
   }
 

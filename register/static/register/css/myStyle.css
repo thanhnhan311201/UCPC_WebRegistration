@@ -19,6 +19,10 @@ table {
     list-style-type: none;
 }
 
+.b-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 #messages {
     margin-left: 110px;
 }
