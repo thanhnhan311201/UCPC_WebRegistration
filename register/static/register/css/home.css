@@ -447,19 +447,21 @@ text-decoration: none;
 }
 
 #organizers .unit_logo .unit .UIT {
-  width: 40%;
+  width: 85%;
+  padding-bottom: 5px;
 }
 
 #organizers .unit_logo .unit .HSV {
-  width: 32%;
+  width: 69%;
 }
 
 #organizers .unit_logo .unit .CS {
-  width: 53%;
+  padding-top: 8px;
+  width: 115%;
 }
 
 #organizers .unit_logo .unit .UCPC {
-  width: 30%;
+  width: 70%;
 }
 
 /* sponsors */
@@ -708,7 +710,7 @@ text-decoration: none;
   }
   
   #organizers .unit_logo .unit .CS {
-    width: 125%;
+    width: 130%;
   }
   
   #organizers .unit_logo .unit .UCPC {
